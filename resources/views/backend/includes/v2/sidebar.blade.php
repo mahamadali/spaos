@@ -2,12 +2,13 @@
 <aside id="leftsidebar" class="sidebar">
     <div class="menu">
         <ul class="list">
+
             {{-- USER INFO BLOCK --}}
             <li>
                 <div class="user-info">
                     <div class="image">
                         <a href="{{ route('backend.dashboard') }}">
-                            <img src="{{ auth()->user()->profile_image_url }}" alt="User">
+                            <img src="{{ auth()->user()->profile_image }}" alt="{{ auth()->user()->name }}">
                         </a>
                     </div>
 
@@ -16,24 +17,29 @@
                         <small>{{ auth()->user()->roles()->first()->name ?? '' }}</small>
                     </div>
 
-                    {{-- optional icons --}}
                     <a href="{{ route('backend.notifications.index') }}" title="Notifications"><i class="zmdi zmdi-notifications"></i></a>
                     <a href="{{ route('backend.settings') }}" title="Settings"><i class="zmdi zmdi-settings"></i></a>
                     <a href="{{ route('logout') }}" title="Sign out"><i class="zmdi zmdi-power"></i></a>
                 </div>
             </li>
 
-            <li class="header">{{ __('messages.main') }}</li>
+            {{-- <li class="header">{{ __('messages.main') }}</li> --}}
 
-            {{-- DYNAMIC MENU FROM LARAVEL MENU --}}
-            @php
-                $menu = new \App\Http\Middleware\GenerateMenus();
-                $menu = $menu->handle('menu', 'vertical', 'ARRAY_MENU');
-            @endphp
-            @include(config('laravel-menu.views.bootstrap-items'), ['items' => $menu->roots()])
+            {{-- SAME LOGIC FROM OLD ONE --}}
+            @if (auth()->user()->hasRole('super admin'))
+                {{-- SUPER ADMIN CUSTOM SIDEBAR --}}
+                @include('superadmin.layouts.superadmin_sidebar')
+            @else
+                {{-- GENERATED MENU FOR NORMAL USERS --}}
+                @php
+                    $menu = new \App\Http\Middleware\GenerateMenus();
+                    $menu = $menu->handle('menu', 'vertical', 'ARRAY_MENU');
+                @endphp
+                @include(config('laravel-menu.views.bootstrap-items'), ['items' => $menu->roots()])
+            @endif
 
             {{-- optionally add extra progress bars --}}
-            <li class="header">{{ __('messages.extra') }}</li>
+            {{-- <li class="header">{{ __('messages.extra') }}</li>
             <li>
                 <div class="progress-container progress-primary m-t-10">
                     <span class="progress-badge">{{ __('messages.traffic_this_month') }}</span>
@@ -44,7 +50,7 @@
                         </div>
                     </div>
                 </div>
-            </li>
+            </li> --}}
         </ul>
     </div>
 </aside>
