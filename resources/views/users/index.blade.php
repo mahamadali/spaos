@@ -136,7 +136,8 @@
                 name: 'status',
                 orderable: false,
                 searchable: true,
-                title: '{{ __('users.status') }}'
+                title: '{{ __('users.status') }}',
+                className: 'text-center pt-0'
             },
         ];
 
