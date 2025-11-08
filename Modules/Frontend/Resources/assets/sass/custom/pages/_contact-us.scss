@@ -1,0 +1,25 @@
+// contact us page css
+.inquire-card {
+    background-color: var(--bs-indigo-bg-subtle);
+    padding: 1.563rem 1.875rem;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    gap: 1rem;
+    
+    .inquirie-icon{
+        width: 3.875rem;
+        height: 3.875rem;
+        line-height: 3.875rem;
+        border-radius: 50%;
+        display: inline-block;
+        text-align: center;
+        background-color: var(--bs-indigo);
+        flex-shrink: 0;
+    }
+}
+@include media-breakpoint-down(sm) { 
+    .inquire-card {
+        flex-wrap: wrap;
+    }
+}

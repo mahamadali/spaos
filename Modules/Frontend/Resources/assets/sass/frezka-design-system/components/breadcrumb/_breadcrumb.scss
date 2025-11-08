@@ -1,0 +1,42 @@
+.breadcrumb-card{
+    padding: 1.688rem 0;
+    background-color: var(--bs-gray-500);
+
+    .breadcrumb{
+        .breadcrumb-item {
+           position:relative;
+           font-weight: $font-weight-medium;
+           font-size: 1rem;
+           padding-left: 0;
+           padding-right: 1.375rem;
+           margin-right: .625rem;
+           a{
+               color: var(--bs-body-color);
+           }
+
+           &.active{
+            a{
+                color: var(--bs-secondary);
+            }
+           }
+
+           &:before {
+            content: "\EAE0";
+            font-family: "Phosphor" !important;
+            position: absolute;
+            top: 0;
+            right: 0;
+            color: var(--bs-gray-600);
+           }
+    
+           &:last-child{
+               padding-right: 0;
+               margin-right: 0;
+    
+               &:before{
+                   content: none;
+               }
+           }
+       }
+    }
+}

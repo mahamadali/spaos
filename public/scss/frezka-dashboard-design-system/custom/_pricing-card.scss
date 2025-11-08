@@ -1,0 +1,181 @@
+// Home Page Common CSS
+.nav-pills {
+  &.pricing-nav {
+    background-color: var(--bs-body-bg);
+    border: 1px solid var(--bs-border-color);
+
+    .nav-link {
+      background: transparent;
+      &.active {
+        background-color: var(--bs-secondary);
+
+        .discount-badge {
+          color: var(--bs-indigo);
+        }
+      }
+    }
+  }
+}
+
+.pricing-card {
+  background-color: var(--bs-body-bg);
+
+  .pricing-title {
+    i {
+      color: var(--bs-heading-color);
+      font-size: 2.625rem;
+    }
+  }
+  .buy-btn {
+    color: var(--bs-heading-color);
+    background-color: var(--bs-gray-900);
+    font-weight: $font-weight-semibold;
+    transition: all 0.5s ease-in-out;
+
+    &:hover {
+      background-color: var(--bs-secondary);
+      color: var(--bs-white);
+    }
+  }
+  .pricing-list-desc {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      position: relative;
+      margin-bottom: 0.75rem;
+      padding-left: 1rem;
+      font-size: 1rem;
+
+      &::after {
+        content: '';
+        height: 0.25rem;
+        width: 0.25rem;
+        border-radius: 50%;
+        background-color: var(--bs-body-color);
+        position: absolute;
+        top: 55%;
+        left: 0;
+        transform: translateY(-45%);
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+.pricing-comparison {
+  padding-top: 70px;
+}
+.pricing-plan-table {
+  background-color: var(--bs-body-bg);
+
+  .table {
+    thead {
+      tr {
+        border-bottom: 1px solid transparent !important;
+        background-color: transparent;
+        color: var(--bs-body-color);
+        th {
+          color: var(--bs-body-color);
+          font-weight: $font-weight-normal;
+          white-space: normal;
+          .purchase-btn {
+            color: var(--bs-heading-color);
+            background-color: var(--bs-body-bg);
+            font-weight: $font-weight-semibold;
+            transition: all 0.5s ease-in-out;
+
+            &:hover {
+              background-color: var(--bs-secondary);
+              color: var(--bs-white);
+            }
+          }
+        }
+      }
+    }
+    tbody {
+      tr {
+        td {
+          color: var(--bs-heading-color);
+          padding-left: 0;
+          padding-right: 0;
+          font-size: 1.125rem;
+        }
+        &:last-child {
+          border-bottom: 1px solid transparent !important;
+        }
+        border-bottom: 1px solid var(--bs-border-color) !important;
+      }
+      &.limit-table {
+        tr {
+          td {
+            color: var(--bs-heading-color);
+            padding: 0.5rem;
+          }
+          th {
+            padding: 0.5rem;
+          }
+          border-bottom: 0.063rem solid transparent !important;
+        }
+      }
+    }
+  }
+}
+
+.applied-taxes-card {
+  background-color: var(--bs-gray-900);
+}
+
+.section-background {
+  background-color: var(--bs-gray-900);
+}
+
+.subs-plan {
+  margin-bottom: 1.25rem;
+  .pricing-tab {
+    background-color: var(--bs-body-bg);
+    padding: 1.25rem;
+    &:hover,
+    &:has(.form-check-input:checked) {
+      background-color: var(--bs-primary-bg-subtle);
+    }
+  }
+}
+.coupons-card {
+  background-color: rgba(var(--bs-purple-rgb),0.4);
+
+  &:hover,
+  &:has(.form-check-input:checked) {
+    background-color: var(--bs-purple);
+  }
+  .coupons-status {
+    color: var(--bs-primary);
+    font-weight: $font-weight-semibold;
+  }
+}
+.payment-card {
+  background-color: var(--bs-body-bg);
+  padding: 1.25rem;
+  .payments-container {
+    padding: 0.75rem;
+    background-color: var(--bs-gray-900);
+  }
+  .booking-payment-method {
+    padding: 1.25rem;
+    background-color: var(--bs-gray-900);
+  }
+}
+
+.payment-details-card {
+  background-color: var(--bs-body-bg);
+  padding: 1.25rem;
+}
+
+@include media-breakpoint-down(md) {
+  .pricing-comparison {
+    padding-top: 32px;
+  }
+}

@@ -1,0 +1,37 @@
+/*!
+* Version: 1.1.0
+* Template: Example Project
+* Author: iqonic.design
+* Design and Developed by: iqonic.design
+* NOTE: This file contains the styling for Template.
+*
+*/
+
+@import "./bootstrap/mixins/banner";
+@include bsBanner("");
+
+
+// scss-docs-start import-stack
+// Configuration
+@import "./bootstrap/functions";
+// frezka Design system
+@import "./frezka-dashboard-design-system/variables";
+@import "./frezka-dashboard-design-system/variables-dark";
+@import "./frezka-dashboard-design-system/variables/index";
+@import "./bootstrap/variables";
+@import "./bootstrap/variables-dark";
+@import "./bootstrap/maps";
+@import "./bootstrap/mixins";
+@import "./bootstrap/utilities";
+
+// frezka-dashboard design system Mixin And Helper
+@import "./frezka-dashboard-design-system/helper/mixins";
+@import "./frezka-dashboard-design-system/helper/reboot";
+@import "./frezka-dashboard-design-system/root";
+@import "./frezka-dashboard-design-system/helper/utilities";
+
+@import "./custom/auth/authentication";
+@import "./custom/auth/auth-pro";
+@import "./custom/kanban/kanban";
+@import "./custom/pricing/pricing";
+@import "./custom/ui-kit/ui-kit";

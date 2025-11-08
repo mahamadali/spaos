@@ -1,0 +1,69 @@
+// Datatable 
+.custom-card-table {
+
+  thead,
+  tbody,
+  tfoot,
+  tr,
+  td,
+  th {
+    white-space: initial;
+  }
+
+  thead {
+    display: none;
+  }
+}
+
+tbody {
+
+  td,
+  tr {
+    border: 0 !important;
+
+    .sorting_1 {
+      padding: 0;
+    }
+  }
+}
+
+// pagination
+.dataTables_wrapper {
+  .data_table_widgets {
+    margin-top: 3.75rem;
+
+    .dataTables_info {
+      padding-top: 0
+    }
+  }
+
+  .dataTables_paginate {
+    overflow-x: auto;
+  }
+}
+
+@include media-breakpoint-down(xl) {
+  // pagination
+  .dataTables_wrapper {
+    .data_table_widgets {
+      margin-top: 2rem;
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  div{
+    &.dataTables_wrapper {
+      .datatable-pagination-wrapper{
+        div{
+          &.dataTables_paginate {
+            ul.pagination {
+              justify-content: start !important;
+            }
+          }
+        }
+
+      }
+    }
+  }
+}

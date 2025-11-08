@@ -1,0 +1,25 @@
+<?php
+
+return [
+    'lbl_razorpay' => 'رازورباي',
+    'lbl_secret_key' => 'المفتاح السري',
+    'lbl_app_key' => 'مفتاح التطبيق',
+    'lbl_stripe' => 'سترايب',
+    'lbl_paystack' => 'باي ستاك',
+    'lbl_paypal' => 'باي بال',
+    'lbl_flutterwave' => 'فلوترويف',
+    'lbl_client_id' => 'معرف الموقع',
+    'lbl_cinet' => 'سينيت',
+    'lbl_cinet_apikey' => 'مفتاح API لسينيت',
+    'lbl_sadad' => 'سداد',
+    'lbl_sadad_domain' => 'النطاق',
+    'lbl_airtelmoney' => 'ايرتل موني',
+    'lbl_phonepay' => 'فون باي',
+    'lbl_app_id' => 'معرف التطبيق',
+    'lbl_merchentid' => 'معرف التاجر',
+    'lbl_saltid' => 'معرف الملح',
+    'lbl_saltkey' => 'مفتاح الملح',
+    'lbl_midtrans' => 'ميدترانس',
+    'lbl_is_live' => 'هل هو مباشر أم تجريبي',
+    'title' => 'المدفوعات',
+];

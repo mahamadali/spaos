@@ -1,0 +1,18 @@
+.noUi-target {
+    border-color: transparent;
+    background: unset;
+}
+.noUi-horizontal {
+    height: .25rem;
+    .noUi-handle {
+        cursor: pointer;
+        width: 1.125rem;
+        height: 1.075rem;
+        top: -.5rem;
+        right: -.5rem;
+        border-radius: var(--bs-border-radius-pill);
+        &:after, &:before{
+            content: unset
+        }
+    }
+}

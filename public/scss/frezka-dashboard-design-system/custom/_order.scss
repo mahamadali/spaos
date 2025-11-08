@@ -1,0 +1,28 @@
+.product-card-order {
+    .order-img {
+        height: 70px;
+        width: 70px;
+        min-width: 70px;
+    }
+    .close-icon {
+        position: absolute;
+        top: -.5rem;
+        right: -.5rem;
+        height: 25px;
+        width: 25px;
+        line-height: 25px;
+    }
+    .order-price-box {
+        margin-bottom: .25rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+.order-deatils-card {
+    margin-bottom: 1rem;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}

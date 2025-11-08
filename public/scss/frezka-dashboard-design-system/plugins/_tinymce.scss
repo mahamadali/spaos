@@ -1,0 +1,63 @@
+.tox {
+    .tox-statusbar {
+        background-color: var(--bs-body-bg) !important;
+        border-top: 1px solid var(--bs-border-color) !important;
+        color: var(--bs-body-color) !important;
+        a{
+           color: var(--bs-body-color) !important;
+        }
+    }
+    .tox-statusbar__path-item, .tox-statusbar__wordcount {
+       color: var(--bs-body-color) !important;
+   }
+   .tox-toolbar-overlord {
+        background-color: var(--bs-body-bg) !important;
+    }
+    .tox-menubar {
+        background-color: var(--bs-body-bg) !important;
+    }
+    .tox-mbtn {
+        background: var(--bs-body-bg) !important;
+        color: var(--bs-body-color) !important;
+        border: 1px solid var(--bs-border-color) !important;
+    }
+    .tox-promotion {
+        background-color: var(--bs-body-bg) !important;
+    }
+    .tox-toolbar, .tox-toolbar__overflow, .tox-toolbar__primary {
+        background-color: var(--bs-body-bg) !important;
+    }
+    .tox-tbtn--disabled, .tox-tbtn--disabled:hover, .tox-tbtn:disabled, .tox-tbtn:disabled:hover {
+        background: var(--bs-body-bg) !important;
+        color: var(--bs-body-color) !important;
+    }
+    .tox-tbtn--bespoke {
+        background: var(--bs-body-bg) !important;
+        color: var(--bs-body-color) !important;
+    }
+    .tox-tbtn {
+        background: var(--bs-body-bg) !important;
+        color: var(--bs-body-color) !important;
+        border: 1px solid var(--bs-border-color) !important;
+        svg{
+            fill: var(--bs-body-color) !important;
+        }
+    }
+    .tox-tbtn--disabled svg, .tox-tbtn--disabled:hover svg, .tox-tbtn:disabled svg, .tox-tbtn:disabled:hover svg {
+        fill: var(--bs-body-color) !important;
+    }
+    .tox-statusbar__branding {
+        svg{
+            fill: var(--bs-primary) !important;
+        }
+    }
+    .tox-promotion-link {
+        background-color: var(--bs-primary-tint-90) !important;
+        color: var(--bs-primary) !important;
+    }
+}
+.tox:not(.tox-tinymce-inline) .tox-editor-header {
+    background-color: var(--bs-body-bg)!important;
+    color: var(--bs-body-color) !important;
+    box-shadow: none !important;
+}

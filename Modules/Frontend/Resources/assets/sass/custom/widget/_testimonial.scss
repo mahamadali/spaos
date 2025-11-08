@@ -1,0 +1,34 @@
+.testimonial {
+    background-color: var(--bs-indigo-bg-subtle);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
+    .testimonial-title {
+        font-size: 1.125rem;
+        font-style: italic;
+    }
+
+    .testimonial-desc {
+        font-size: 1.125rem;
+        font-style: italic;
+        line-height: 2;
+        margin: 0;
+    }
+
+    .author-image{
+        height: 3.75rem;
+        width: 3.75rem;
+    }
+
+    .comma-img {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+    }
+
+    .testimonial-author-info {
+        margin-top: 3.75rem;
+    }
+}

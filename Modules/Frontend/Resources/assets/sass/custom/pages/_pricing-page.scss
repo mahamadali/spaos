@@ -1,0 +1,163 @@
+.subs-plan {
+        margin-bottom: 1.25rem;
+    .pricing-tab{
+        background-color: var(--bs-purple-bg-subtle);
+        padding: 1.25rem;
+        &:hover, &:has(.form-check-input:checked){
+            background-color: var(--bs-purple); 
+        }
+    }
+}
+
+.payment-card {
+    background-color: var(--bs-gray-500);
+    padding: 1.25rem;
+    .payments-container{
+        padding: .75rem;
+        background-color: var(--bs-gray-900);
+    }
+    .booking-payment-method{
+        padding: 1.25rem;
+        background-color: var(--bs-gray-900);
+    }
+}
+
+.available-coupon-card {
+    background-color: var(--bs-gray-500);
+    padding: 1.25rem;
+    .coupan-list{
+        overflow-x: auto;
+    }
+    .coupons-card{
+        background-color: var(--bs-gray-900);
+    
+        &:hover, &:has(.form-check-input:checked){
+            background-color: var(--bs-purple); 
+            
+        }
+        &:has(.form-check-input:checked){
+            .coupons-status{
+                color: var(--bs-success);            
+            }
+        }
+        .coupons-status{
+            color: var(--bs-primary);  
+            font-weight: $font-weight-semibold;          
+        }
+    }
+}
+.coupons-inner{
+    li{
+        margin-bottom: 1rem;
+
+        &:last-child{
+            margin-bottom: 0;
+        }
+        .coupons-card {
+            background-color: var(--bs-gray-500);
+            &:hover, &:has(.form-check-input:checked){
+                background-color: var(--bs-purple); 
+                
+            }
+            .coupons-status{
+                color: var(--bs-primary); 
+                font-weight: $font-weight-semibold;           
+            }
+
+        }
+    }
+    
+}
+
+.payment-details-card {
+    background-color: var(--bs-purple-bg-subtle);
+    padding: 1.25rem;
+}
+
+.pricing-comparison {
+    background-color: var(--bs-gray-500);
+    padding-bottom: 4.375rem;
+}
+
+.pricing-table {
+    max-height: 900px;
+
+    .table{
+        thead{
+            tr{
+                border-bottom: 1px solid transparent !important;
+            }
+        }
+        tbody{
+            tr{
+                td{
+                    color: var(--bs-heading-color);
+                    padding-left:  0;
+                    padding-right: 0 ;
+                    font-weight: $font-weight-medium;
+                    font-size: 1.125rem;
+                }
+                &:last-child{
+                    border-bottom: 1px solid transparent !important;
+                }
+                border-bottom: 1px solid var(--bs-border-color) !important;
+            }
+            &.limit-table{
+                tr{
+                    td{
+                        color: var(--bs-body-color);
+                        padding: .5rem;
+                    }
+                    th{
+                        padding: .5rem;
+                    }
+                    border-bottom: .063rem solid transparent !important;
+                }
+            }
+        }
+    }
+}
+
+// payment detail
+
+.payments-container{
+    padding: 1.25rem 1.875rem;
+    .payments-show-list{
+        i{
+            transition: all .3s ease-in-out;
+        }
+        &[aria-expanded="true"]{
+            i{
+                transform: scale(-1);
+            }
+        } 
+    }
+}
+.tax-box{
+    i{
+        transition: all .3s ease-in-out;
+    }
+    &[aria-expanded="true"]{
+        i{
+            transform: scale(-1);
+        }
+    } 
+}
+
+.booking-payment-method{
+    padding: 1.875rem;
+    .payment-method-items{
+        margin-bottom: 1.5rem;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+}
+@include media-breakpoint-down(md) {
+    .pricing-comparison {
+        padding-bottom: 2rem;
+    }
+}
+.invalid-feedback.text-danger {
+  color: red !important; // Use !important as a last resort
+}

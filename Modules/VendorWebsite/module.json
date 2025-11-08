@@ -1,0 +1,13 @@
+{
+    "name": "VendorWebsite",
+    "alias": "vendorwebsite",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\VendorWebsite\\Providers\\VendorWebsiteServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

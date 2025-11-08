@@ -1,0 +1,46 @@
+.banner-main {
+    padding: 10.9375rem 0;
+    .demo-action {
+        margin-top: 5.625rem;
+    }
+    .dashbord-img {
+        aspect-ratio: 4/2;
+    }
+}
+
+.heading-wrap{
+    margin-bottom: 3.125rem;
+}
+
+@include media-breakpoint-down(xl) {
+    .banner-main {
+        padding: 8.125rem 0;
+
+        .demo-action {
+            margin-top: 3.125rem;
+        }
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    .banner-main {
+        padding: 4.125rem 0;
+    }
+}
+
+@media(max-width:768px){
+    .blog-section .section-title,
+    .action-title{
+        font-size: 1.5rem;    
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .banner-main {
+        padding: 3.125rem 0;
+
+        .demo-action {
+            margin-top: 1.5rem;
+        }
+    }
+}

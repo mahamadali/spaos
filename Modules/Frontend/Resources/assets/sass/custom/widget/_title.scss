@@ -1,0 +1,36 @@
+.section-title-wrap {
+    margin-bottom: 2rem;
+
+    &.center {
+        text-align: center;
+        margin-bottom: 3.125rem;
+    }
+
+    .subtitle {
+        display: inline-block;
+        font-family: "Fuzzy Bubbles", serif;
+        font-weight: 700;
+        margin-bottom: 0.25rem;
+        color: var(--bs-primary);
+        text-decoration: underline;
+        text-transform: uppercase;
+    }
+
+    .section-title {
+        margin-bottom: 0;
+    }
+
+    .title-description {
+        margin-top: 1rem;
+        margin-bottom: 0;
+    }
+
+}
+
+@media(max-width:767px) {
+    .section-title-wrap {
+        &.center {
+            margin-bottom: 2rem;
+        }
+    }
+}

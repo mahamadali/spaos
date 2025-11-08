@@ -1,0 +1,49 @@
+// Home Page Common CSS
+.pricing-nav {
+    background-color: var(--bs-gray-500);
+    border: 1px solid var(--bs-border-color);
+
+    .nav-link {
+        background: transparent;
+        &.active{
+    
+            background: var(--bs-secondary);
+            color: var(--bs-light-text-emphasis);
+    
+            .discount-badge{
+                color: var(--bs-indigo);
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .pricing-nav {
+        gap: .5rem 1rem;
+        background-color: transparent;
+        border: none;
+
+        .nav-link {
+            background: var(--bs-gray-500);
+        }
+
+    }
+}
+
+.expert-card {
+    background-color: var(--bs-gray-500);
+
+    .easy-nav {
+        width: fit-content;
+        border: 1px solid var(--bs-heading-color);
+        color: var(--bs-heading-color);
+    }
+}
+
+.no-data-found {
+    display: inline-block;
+    background: var(--bs-primary-bg-subtle);
+    padding: 1rem;
+    border-left: 3px solid var(--bs-primary);
+    color: var(--bs-primary);
+}

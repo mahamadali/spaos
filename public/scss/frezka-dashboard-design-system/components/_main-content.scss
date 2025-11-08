@@ -1,0 +1,18 @@
+.content-inner {
+    padding: calc(var(--bs-gutter-x, 1rem) * 2);
+}
+.text-heading {
+    color: var(--bs-heading-color);
+}
+.flex-shrink-0 {
+    flex-shrink: 0;
+}
+.bg-gray-900 {
+    background-color: var(--bs-gray-900);
+}
+
+@include media-breakpoint-down(md) {
+    .content-inner {
+        padding: calc(var(--bs-gutter-x, 1rem) * 2);
+    }
+}

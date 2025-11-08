@@ -1,0 +1,23 @@
+.page-item {
+    &.active{
+        .page-link{
+            color:var(--#{$variable-prefix}white);
+            background-color: var(--#{$variable-prefix}primary);
+            border-color: var(--#{$variable-prefix}primary);
+        }
+    }
+    .page-link{
+        border-color: var(--#{$variable-prefix}primary-bg-subtle);
+        color: var(--#{$variable-prefix}primary);
+    
+        &:hover{
+            color: var(--bs-white);
+        }
+    }
+}
+.page-link {
+    &.active,
+  .active > & {
+    z-index: unset !important;
+}
+}

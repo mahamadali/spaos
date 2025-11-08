@@ -1,0 +1,144 @@
+.blog-card {
+    overflow: hidden;
+
+    .blog-image {
+        display: inline-block;
+        aspect-ratio: 4/2.2;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .blog-details {
+        background-color: var(--bs-gray-500);
+    }
+}
+
+.category-list {
+    li {
+        position: relative;
+
+        &::after {
+            content: "/";
+            position: absolute;
+            top: 50%;
+            right: -.8rem;
+            transform: translateY(-50%);
+            color: var(--bs-primary);
+            font-size: .8rem;
+        }
+
+        &:last-child {
+            &::after {
+                content: none;
+            }
+        }
+
+        a {
+            font-size: .875rem;
+        }
+    }
+}
+
+.date {
+    font-size: .875rem;
+}
+
+.blog-detail-img {
+    aspect-ratio: 1/.4;
+    object-position: top;
+}
+
+/* Blog Details */
+.blog-content{
+    .blog-list {
+        padding: 2.188rem;
+        background-color: var(--bs-gray-500);
+        .blog-list-items{
+            li{
+                margin-bottom: 1.5rem;
+                font-size: 1rem;
+    
+                &:last-child{
+                    margin-bottom: 0;
+                }
+    
+            }
+        }
+    }
+    .blog-info{
+        margin: 3.75rem 0; 
+        .blog-info-list{
+            padding: 1.875rem 1.25rem;
+            li{
+                margin-bottom: 1.875rem;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+                &::marker {
+                    color: var(--bs-heading-color);
+                }
+            }
+        }   
+    }
+    .blog-conclusion{
+
+        .images{
+            aspect-ratio: 1/.4;
+            object-position: top;
+        }
+
+        .blog-info-conclusion{
+            margin-top: 3.75rem;
+            margin-bottom: 5rem;
+        }
+    }
+}
+
+.blog-pagination{
+    margin: 2rem 0;
+    .blog-pagination-right{
+        text-align: end;
+    }
+    .blog-pagination-btn{
+        &:hover{
+            .blog-pagination-link{
+                color: var(--bs-primary);
+            }
+        }
+    }
+}
+
+.author-card{
+    background-color: var(--bs-gray-500);
+    .author-img{
+        width: 5rem;
+        height: 5rem;
+    }
+    .author-card-desc{
+        margin-bottom: 3rem;
+    }
+}
+
+@include media-breakpoint-down(md) { 
+    /* Blog Details */
+    .blog-content{
+        .blog-list {
+            padding: 1.5rem;
+        }
+        .blog-info{
+            margin: 2rem 0;    
+        }
+        .blog-conclusion{
+            .blog-info-conclusion{
+                margin-top: 1.5rem;
+                margin-bottom: 2rem;
+            }
+        }
+
+    }
+    .author-card{
+        .author-card-desc{
+            margin-bottom: 1.5rem;
+        }
+    }
+ }

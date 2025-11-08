@@ -1,0 +1,69 @@
+.branch-card {
+    .branch-image {
+        .badge {
+            border-radius: 0 var(--bs-border-radius) 0 var(--bs-border-radius);
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            aspect-ratio: 2 / 1.7;
+        }
+    }
+
+    .branch-info-box {
+        background: var(--bs-gray-900);
+        padding: 1rem;
+        border-radius: var(--bs-border-radius);
+        position: absolute;
+        bottom: 1rem;
+        left: 1rem;
+        right: 1rem;
+    }
+
+    .select-icon {
+        position: absolute;
+        top: 50%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        text-align: center;
+        z-index: 1;
+        color: var(--bs-success);
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: var(--bs-border-radius);
+        opacity: 0;
+    }
+
+    &.selected {
+        border: 2px solid var(--bs-primary);
+        box-shadow: 0 0 0 2px var(--bs-box-shadow);
+
+        .select-icon {
+            opacity: 1;
+        }
+
+        &::after {
+            opacity: 1;
+        }
+    }
+}
+
+#selectBranchModal {
+    .modal-dialog {
+        --bs-modal-width: 70%;
+    }
+}

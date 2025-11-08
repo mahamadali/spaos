@@ -1,0 +1,26 @@
+.nav-tabs {
+    border-radius: var(--bs-border-radius);
+    margin-bottom: 0.5rem;
+
+    .nav-link {
+        border-radius: var(--bs-border-radius);
+        background-color: var(--bs-primary-bg-subtle);
+        color: var(--bs-body-color);
+
+        &:hover {
+            color: var(--bs-white);
+            background-color: var(--bs-primary);
+            border-color: var(--bs-primary);
+        }
+        &:active {
+            color: var(--bs-white);
+            background-color: var(--bs-primary);
+            border-color: var(--bs-primary);
+        }
+    }
+}
+
+.nav-pills {
+    @include border-radius($nav-pills-border-radius);
+    margin-bottom: .5rem;
+}

@@ -1,0 +1,40 @@
+/*!
+* Version: 5.0.0
+* Template: frezka - Frontend Website
+* Author: iqonic.design
+* Design and Developed by: iqonic.design
+* NOTE: This file contains the styling for Template.
+*
+*/
+
+// scss-docs-start import-stack
+// Configuration
+@import "./bootstrap/functions";
+// frezka Design system
+@import "./frezka-design-system/variables";
+@import "./frezka-design-system/variables-dark";
+@import "./bootstrap/variables";
+@import "./bootstrap/variables-dark";
+@import "./bootstrap/maps";
+@import "./bootstrap/mixins";
+@import "./bootstrap/utilities";
+
+// Custom Mixin And Helper
+@import "./frezka-design-system/helper/mixins";
+@import "./frezka-design-system/helper/reboot";
+@import "./frezka-design-system/helper/root";
+@import "./frezka-design-system/helper/utilities";
+
+
+// Banner
+@import "./custom/slider/slider";
+
+// Auth
+@import "./custom/auth/auth";
+
+// Widget
+@import "./custom/widget/widget";
+
+// Pages
+@import "./custom/pages/index";
+

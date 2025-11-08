@@ -1,0 +1,26 @@
+<?php
+
+return [
+    'title' => 'المستخدمون',
+    'account_crdential' => 'تم إرسال بيانات الحساب إلى المستخدم.',
+    'user_created' => 'تم إنشاء المستخدم بنجاح.',
+    'lbl_old_password' => 'كلمة المرور القديمة',
+    'lbl_new_password' => 'كلمة المرور الجديدة',
+    'lbl_confirm_password' => 'تأكيد كلمة المرور',
+    'address_store' => 'تم حفظ عنوان المستخدم.',
+    'user_not_found' => 'المستخدم غير موجود.',
+    'address_list' => 'قائمة عناوين المستخدم.',
+    'address_not_found' => 'العنوان غير موجود.',
+    'address_deleted' => 'تم حذف العنوان.',
+    'address_updated' => 'تم تحديث العنوان.',
+    'old_password' => 'أدخل كلمة المرور القديمة',
+    'new_password' => 'أدخل كلمة المرور الجديدة',
+    'confirm_password' => 'أكد كلمة المرور الجديدة',
+    'invalid_action' => 'الإجراء غير صالح',
+    'name' => 'الاسم الكامل',
+    'email' => 'البريد الإلكتروني',
+    'gender' => 'الجنس',
+    'mobile' => 'رقم الهاتف',
+    'created_at' => 'تاريخ الإنشاء',
+    'status' => 'الحالة',
+];

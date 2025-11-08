@@ -1,0 +1,56 @@
+<?php
+
+namespace Modules\Logistic\database\seeders;
+
+use Illuminate\Database\Seeder;
+use Modules\Logistic\Models\Logistic;
+use Modules\Logistic\Models\LogisticZone;
+use Modules\Logistic\Models\LogisticZoneCity;
+
+class LogisticZoneTableSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        if (env('IS_DUMMY_DATA')) {
+            Logistic::create([
+                'name' => 'Fedex',
+                'created_by'=> 2,
+                'updated_by'=> 2
+            ]);
+
+            Logistic::create([
+                'name' => 'Bluedart',
+                'created_by'=> 2,
+                'updated_by'=> 2
+            ]);
+
+            $this->createLogisticZone([
+                'city_id' => [1],
+                'name' => 'Mumbai Zone',
+                'logistic_id' => 1,
+                'country_id' => 1,
+                'state_id' => 1,
+                'created_by'=> 2,
+                'updated_by'=> 2
+            ]);
+        }
+    }
+
+    protected function createLogisticZone($request)
+    {
+        $data = collect($request)->except('city_id');
+        $logisticZone = LogisticZone::create($data->toArray());
+        foreach ($request['city_id'] as $city_id) {
+            $logisticZoneCity = new LogisticZoneCity;
+            $logisticZoneCity->logistic_id = $logisticZone->logistic_id;
+            $logisticZoneCity->logistic_zone_id = $logisticZone->id;
+            $logisticZoneCity->city_id = $city_id;
+            $logisticZoneCity->save();
+        }
+    }
+}

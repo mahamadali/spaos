@@ -1,0 +1,19 @@
+.select2-container {
+    .select2-selection--single{
+        .select2-selection__rendered{
+           padding: 0.5rem 1rem 0.5rem 3rem;
+        }
+    }
+}
+.select2-container--default{
+    .select2-selection--multiple {
+     padding: 0.5rem 1rem 0.5rem 3rem;
+    }
+}
+.select2-container--default{
+    .select2-selection--multiple {
+        .select2-selection__choice__remove {
+           border: none;
+       }
+    }
+}

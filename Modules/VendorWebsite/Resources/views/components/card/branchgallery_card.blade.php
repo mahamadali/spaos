@@ -1,0 +1,1 @@
+<img src="{{ isset($image) && $image->full_url ? $image->full_url : asset('img/vendorwebsite/branch-image.jpg') }}" alt="branch gallery" class="img-fluid rounded-3 w-100 object-fit-cover branch-gallery-img" loading="lazy" onerror="this.onerror=null;this.src='{{ asset('img/vendorwebsite/branch-image.jpg') }}'">

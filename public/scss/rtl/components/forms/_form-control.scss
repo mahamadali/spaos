@@ -1,0 +1,31 @@
+.form-select {
+    padding: 0.5rem 1rem 0.5rem 3rem;
+    background-position: left 1rem center;
+}
+.input-group{
+    .input-group-text{
+        border-left: 0;
+        border-right: var(--bs-border-width) solid var(--bs-border-color);
+    }
+
+    .form-control{
+        border-left: var(--bs-border-width) solid var(--bs-border-color);
+        border-right: 0;
+        padding-right: 0;
+        padding-left: $input-padding-x;
+    }
+
+    &:focus-within{
+        .input-group-text{
+            border-color: var(--bs-primary);
+        }
+
+        .form-control{
+            border-color: var(--bs-primary);
+        }
+    }
+}
+.input-group:focus-within .iti__country-container {
+    border-left: none;
+    border-right: var(--bs-border-width) solid var(--bs-primary);
+}

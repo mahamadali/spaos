@@ -1,0 +1,29 @@
+.apexcharts-radialbar-area {
+    stroke-linecap: round;
+} 
+.apexcharts-canvas{
+
+    .apexcharts-xaxistooltip, .apexcharts-yaxistooltip {
+        color: var(--bs-body-color);
+        background: var(--bs-body-bg);
+        border: 1px solid var(--bs-border-color);
+    }
+    .apexcharts-tooltip {
+        box-shadow: none;
+    }
+    .apexcharts-tooltip.apexcharts-theme-light {
+        background: var(--bs-body-bg);
+        border: 1px solid var(--bs-border-color);
+    }
+    .apexcharts-tooltip.apexcharts-theme-light .apexcharts-tooltip-title {
+        background: var(--bs-body-bg);
+        border-bottom: 1px solid var(--bs-border-color);
+    }
+    .apexcharts-menu {
+        background: var(--bs-body-bg);
+        border: 1px solid var(--bs-border-color);
+        .apexcharts-menu-item{
+            color: var(--bs-body-color);
+        }
+    }
+}

@@ -1,0 +1,332 @@
+/* ————— PROXIMA NOVA ————— */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+body {
+ font-family: 'Poppins', sans-serif !important;
+}
+
+/* ===== MANGOMINT STYLE OVERRIDE ===== */
+
+body {
+    background: #faf7fb !important;
+    --sidebar-width: 18.2rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+ font-family: 'Poppins', sans-serif !important;
+}
+
+/* sidebar light pastel */
+.sidebar {
+    background: #ffffff !important;
+    border-right: 1px solid rgba(0,0,0,0.05);
+    box-shadow: 0 0 35px rgba(0,0,0,0.06) !important;
+    border-radius: 0 24px 24px 0 !important;
+}
+
+/* nav items */
+.sidebar-base .nav-item .nav-link {
+    padding: .75rem 1.3rem !important;
+    border-radius: 14px !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    color: #3a3b3f !important;
+    transition: all .22s ease !important;
+}
+
+/* hover */
+.sidebar-base .nav-item .nav-link:hover:not(.active) {
+    background: linear-gradient(90deg, var(--bs-secondary-tint-40), rgba(255,255,255,0)) !important;
+}
+
+/* active — purple pastel */
+.sidebar-base .nav-item .nav-link.active {
+    background: linear-gradient(90deg, var(--bs-secondary-tint-40), rgba(255,255,255,0)) !important;
+}
+
+/* cards soft */
+.card {
+    border-radius: 24px !important;
+    background: #ffffff !important;
+    border: none !important;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.05) !important;
+}
+
+/* ===== MODERN DASHBOARD CARD (MangoMint style) ===== */
+
+.dashboard-cards {
+    background: #ffffff !important;
+    border-radius: 26px !important;
+    border: none !important;
+    padding: 28px !important;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.06) !important;
+    transition: all .25s ease;
+}
+
+/* subtle hover — soft raise */
+.dashboard-cards:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 45px rgba(0,0,0,0.08) !important;
+}
+
+/* number in title */
+.dashboard-cards .title h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #1b1c21 !important;
+    margin: 0;
+    line-height: 1;
+}
+
+/* label text under number */
+.dashboard-cards h5 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 18px;
+    color: #55565a !important;
+}
+
+/* icon circle */
+.dashboard-cards .dashboard-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #f4efff; /* pastel purple */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #865abf;
+    box-shadow: 0 4px 14px rgba(134,90,191,0.15);
+}
+
+/* ===================== MODERN TABLE ===================== */
+
+.table {
+    border: none !important;
+    margin-bottom: 0;
+    border-radius: 20px !important;
+    overflow: hidden;
+}
+
+/* header */
+.table thead th {
+    background: var(--bs-secondary-tint-90) !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    color: #34353b !important;
+    border-bottom: none !important;
+    padding: 14px 20px;
+    white-space: nowrap;
+}
+
+/* rows */
+
+.table thead tr {
+    background-color: var(--bs-secondary-tint-90) !important;
+}
+
+.table tbody td {
+    padding: 14px 20px;
+    font-size: 14px;
+    color: #3b3c42;
+    vertical-align: middle;
+    border-bottom: 1px solid rgba(0,0,0,0.06) !important;
+}
+
+/* last row remove border */
+.table tbody tr:last-child td {
+    border-bottom: none !important;
+}
+
+/* hover */
+.table tbody tr:hover {
+    background: var(--bs-secondary-tint-90) !important;
+}
+
+/* pagination styling */
+.dataTables_paginate .pagination .page-link {
+    border-radius: 10px !important;
+    border: none;
+    padding: 8px 14px;
+    font-weight: 500;
+    margin-left: 5px;
+}
+
+.dataTables_paginate .page-item.active .page-link {
+    box-shadow: 0 4px 12px rgba(107,78,255,0.25);
+}
+
+/* search box + filters */
+.input-group-text {
+    border-radius: 12px 0 0 12px !important;
+}
+
+/* select2 dropdown look consistent */
+.select2-selection {
+    border-radius: 12px !important;
+    background: #f6f7fb !important;
+    border: none !important;
+    min-height: 42px !important;
+    display: flex;
+    align-items: center;
+}
+
+.footer-body a {
+    color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));
+    text-decoration: none;
+}
+
+.top-input-search input {
+    color: #000 !important;
+}
+
+/* modern action buttons */
+.btn.btn-sm {
+    padding: 8px 12px !important;
+    border-radius: 12px !important;
+    font-size: 13px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border: none !important;
+    transition: all 0.15s ease;
+}
+
+td .btn + .btn {
+    margin-left: 8px;
+}
+
+.btn.btn-primary.btn-sm:hover,
+.btn.btn-danger.btn-sm:hover {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+    transform: translateY(-1px);
+}
+
+.btn.btn-primary.btn-sm:active,
+.btn.btn-danger.btn-sm:active {
+    transform: translateY(0px);
+    box-shadow: none;
+}
+
+/* icon smaller + consistent */
+.btn.btn-sm i {
+    font-size: 14px;
+    line-height: 1;
+}
+
+/* primary CTA button modern */
+.btn.btn-primary {
+    border-radius: 12px !important;
+    padding: 10px 18px !important;
+    font-weight: 600;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: none !important;
+    transition: all .18s ease;
+}
+
+.btn.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,.22);
+}
+
+.btn.btn-primary:active {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(0,0,0,.16);
+}
+
+.btn.btn-primary i {
+    font-size: 15px;
+    line-height: 1;
+}
+
+.table-responsive.border {
+    border: none !important;
+}
+
+
+
+
+
+/* === DARK MODE OVERRIDES === */
+html[data-bs-theme="dark"] {
+    background: #0f1115 !important;
+    color: #e9e9ec !important;
+}
+
+/* sidebar dark */
+html[data-bs-theme="dark"] .sidebar {
+    background: rgba(18,18,22,0.92) !important;
+    backdrop-filter: blur(12px);
+    border-right: 1px solid rgba(255,255,255,0.06) !important;
+    box-shadow: 6px 0 25px rgba(0,0,0,0.45) !important;
+}
+
+html[data-bs-theme="dark"] .sidebar-base .nav-item .nav-link {
+    color: #bcbcc8 !important;
+}
+
+html[data-bs-theme="dark"] .sidebar-base .nav-item .nav-link:hover:not(.active) {
+    background: rgba(255,255,255,0.08) !important;
+}
+
+html[data-bs-theme="dark"] .sidebar-base .nav-item .nav-link.active {
+    background: linear-gradient(135deg,#5f48bc,#7e60e9) !important;
+    color: #fff !important;
+    box-shadow: 0 0 14px rgba(127,98,216,0.35) !important;
+}
+
+/* cards dark */
+html[data-bs-theme="dark"] .dashboard-cards,
+html[data-bs-theme="dark"] .card {
+    background: #16181f !important;
+    border: none !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.55) !important;
+}
+
+html[data-bs-theme="dark"] .dashboard-cards h2,
+html[data-bs-theme="dark"] .dashboard-cards h5 {
+    color: #e6e6eb !important;
+}
+
+/* icon circle dark */
+html[data-bs-theme="dark"] .dashboard-cards .dashboard-icon {
+    background: rgba(113,88,205,0.18) !important;
+    color: #c1b5ff !important;
+    box-shadow: 0 4px 16px rgba(127,98,216,0.35) !important;
+}
+
+/* ============= DARK TABLE ============= */
+html[data-bs-theme="dark"] .table thead tr {
+    background-color: #1c1e24 !important;
+}
+
+html[data-bs-theme="dark"] .table thead th {
+    background: #1c1e24 !important;
+    color: #e0e0e4 !important;
+}
+
+html[data-bs-theme="dark"] .table tbody td {
+    color: #d5d5d9 !important;
+    border-bottom: 1px solid rgba(255,255,255,0.06) !important;
+}
+
+html[data-bs-theme="dark"] .table tbody tr:hover {
+    background: #2a2c35 !important;
+}
+
+html[data-bs-theme="dark"] .select2-selection {
+    background: #1c1e24 !important;
+    color: #e4e4e8 !important;
+}
+
+html[data-bs-theme="dark"] .btn.btn-sm {
+    color: #ffffff !important;
+}
+
+html[data-bs-theme="dark"] .btn.btn-sm:hover {
+    box-shadow: 0 4px 10px rgba(255,255,255,0.10);
+}

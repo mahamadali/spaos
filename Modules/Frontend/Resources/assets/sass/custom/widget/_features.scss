@@ -1,0 +1,26 @@
+.features-box{
+    background-color: var(--bs-gray-500);
+    padding: 25px 20px;
+    border-radius: var(--bs-border-radius);
+
+    .feature-img{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+        flex-shrink: 0;
+    }
+
+    .icon-box-desc {
+        font-size: .875rem;
+    }
+}
+
+.feature-container {
+    margin-top: 55px;
+
+    .features-box {
+        background-color: transparent;
+        padding: 0;
+    }
+}
