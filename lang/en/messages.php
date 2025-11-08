@@ -34,6 +34,7 @@ return [
     'Please fix the following errors & try again!' => 'Please fix the following errors & try again!',
     'Copyright' => 'Copyright',
     'change_language' => 'Change language',
+    'change_language' => 'Change language',
     'Notifications' => 'Notifications',
     'you_have_:count_notifications' => 'You have :count notifications',
     ':count_unread' => ':count unread',
@@ -406,7 +407,9 @@ return [
 
     'Search' => 'Search',
     'Language' => 'Language',
+    'change_theme' => 'Change Theme',
     'Dark_Mode' => 'Dark Mode',
+    'Light_Mode' => 'Light Mode',
     'Enable' => 'Enable',
     'Header_Settings' => 'Header Settings',
     'Menu_Items' => 'Menu Items',
