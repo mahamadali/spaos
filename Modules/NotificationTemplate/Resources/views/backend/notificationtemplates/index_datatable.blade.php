@@ -39,7 +39,7 @@
            
             </x-slot>
           </x-backend.section-header>
-        <table id="datatable" class="table table-striped border table-responsive">
+        <table id="datatable" class="table table-bordered table-striped table-hover js-basic-example dataTable">
         </table>
     </div>
     <div class="card-footer">

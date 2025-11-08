@@ -20,7 +20,7 @@
 
             <div class="row mt-4">
                 <div class="table-responsive">
-                    <table id="datatable" class="table table-bordered">
+                    <table id="datatable" class="table table-bordered table-striped table-hover js-basic-example dataTable">
                         <thead>
                             <tr>
                                <th>

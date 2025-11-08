@@ -158,7 +158,7 @@
                 </div>
             </div>
         </div>
-        <table id="datatable" class="table border table-responsive rounded">
+        <table id="datatable" class="table table-bordered table-striped table-hover js-basic-example dataTable">
         </table>
     </div>
 </div>
