@@ -30,6 +30,7 @@
       <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
       <link rel="stylesheet" href="{{ asset('assets/css/color_skins.css') }}">
       <link rel="stylesheet" href="{{ asset('assets/plugins/jquery-datatable/dataTables.bootstrap4.min.css') }}">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
       <style>
         :root {
@@ -392,6 +393,8 @@
     <script src="{{ asset('assets/plugins/jquery-datatable/buttons/buttons.flash.min.js') }}"></script>
     <script src="{{ asset('assets/plugins/jquery-datatable/buttons/buttons.html5.min.js') }}"></script>
     <script src="{{ asset('assets/plugins/jquery-datatable/buttons/buttons.print.min.js') }}"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
       
       @stack('after-scripts')
    </body>

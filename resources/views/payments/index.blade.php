@@ -9,6 +9,19 @@
 @endpush
 
 @section('content')
+
+<div class="block-header">
+        <div class="row">
+            <div class="col-lg-7 col-md-6 col-sm-12">
+                <h2>{{ __($module_action) }}
+                    <small class="text-muted">{{ config('app.name') }}</small>
+                </h2>
+            </div>
+        </div>
+        </div>
+
+        <div class="container-fluid">
+
     <div class="card">
         <div class="card-body">
 
@@ -82,6 +95,7 @@
 
     <div data-render="app">
     </div>
+        </div>
 @endsection
 
 @push('after-styles')

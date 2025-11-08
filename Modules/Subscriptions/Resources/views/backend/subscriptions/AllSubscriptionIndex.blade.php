@@ -269,9 +269,7 @@
                     }
                 ],
                 drawCallback: function() {
-                    if (laravel !== undefined) {
-                        window.laravel.initialize();
-                    }
+                    
                 },
                 columns: [
                     //                     {

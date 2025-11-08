@@ -221,8 +221,12 @@ $permissionIds = isset($plan) && $plan->permission_ids
                                                                     <input type="text" name="features[]" class="form-control mb-2" placeholder="{{ __('messages.enter_feature') }}">
                                                                 </div>
                                                                 <div class="col-md-4 col-5">
-                                                                    <button type="button" class="btn btn-success btn-add  px-md-4 px-3">+</button>
-                                                                    <button type="button" class="btn btn-danger btn-remove  px-md-4 px-3">-</button>
+                                                                    <button type="button" class="btn btn-success btn-add  px-md-4 px-3">
+                                                                        <i class="zmdi zmdi-plus"></i>
+                                                                    </button>
+                                                                    <button type="button" class="btn btn-danger btn-remove  px-md-4 px-3">
+                                                                        <i class="zmdi zmdi-minus"></i>
+                                                                    </button>
                                                                 </div>
                                                             </div>
                                                         @endforelse
@@ -230,9 +234,9 @@ $permissionIds = isset($plan) && $plan->permission_ids
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
-                                                <div class="form-group form-check form-switch">
-                                                    <label class="form-label">{{__('frontend.status')}}</label>
-                                                    <input class="form-check-input" name="status" type="checkbox" {{ (isset($plan) && $plan->status == 0) ? '' : 'checked' }}>
+                                                <div class="checkbox inlineblock">
+                                                    <input name="status" type="checkbox" {{ (isset($plan) && $plan->status == 0) ? '' : 'checked' }}>
+                                                    <label for="remember_me_3">{{__('frontend.status')}}</label>
                                                 </div>
                                             </div>
                                         </div>
@@ -507,7 +511,7 @@ $permissionIds = isset($plan) && $plan->permission_ids
         });
 
         // Initialize select2
-        $('.select2').select2();
+        // $('.select2').select2();
 
         // Initialize tab functionality
         $('a[data-toggle="tab"]').on('shown.bs.tab', function(e) {
@@ -531,8 +535,8 @@ $permissionIds = isset($plan) && $plan->permission_ids
                             <input type="text" name="features[]" class="form-control mb-2" placeholder="{{ __('messages.enter_feature') }}">
                         </div>
                         <div class="col-md-4 col-5">
-                            <button type="button" class="btn btn-success btn-add px-md-4 px-3">+</button>
-                            <button type="button" class="btn btn-danger btn-remove px-md-4 px-3">-</button>
+                            <button type="button" class="btn btn-success btn-add px-md-4 px-3"><i class="zmdi zmdi-plus"></i></button>
+                            <button type="button" class="btn btn-danger btn-remove px-md-4 px-3"><i class="zmdi zmdi-minus"></i></button>
                         </div>
                     </div>`;
                 $('#features-container').append(newFeatureRow);
