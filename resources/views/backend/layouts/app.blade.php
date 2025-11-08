@@ -1,153 +1,217 @@
 <!doctype html>
 <html class="no-js " lang="{{ app()->getLocale() }}" dir="{{ language_direction() }}">
-
-<head>
-    
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <meta name="keyword" content="{{ setting('meta_keyword') }}">
-    <meta name="description" content="{{ setting('meta_description') }}">
-    <meta name="setting_options" content="{{ setting('customization_json') }}">
-    
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-    <meta name="app_name" content="{{ app_name() }}">
-    <meta name="data_table_limit" content="{{ setting('data_table_limit') ?? 10 }}">
-
-    <meta name="auth_user_roles" content="{{ auth()->user()->roles->pluck('name') }}">
-    <meta name="baseUrl" content="{{ url('/') }}" />
-
-    
-    <title>@yield('title')</title>
-
-    <link rel="icon" href="{{ asset(setting('logo')) }}" type="image/x-icon"> <!-- Favicon-->
-    <link rel="apple-touch-icon" sizes="76x76" href="{{ asset(setting('favicon')) }}">
-
-    <!-- Shortcut Icon -->
-    <link rel="shortcut icon" href="{{ asset(setting('favicon') ?? 'images/logo/mini_logo.png') }}">
-    <link rel="icon" type="image/x-icon" href="{{ asset(setting('favicon') ?? 'images/logo/mini_logo.png') }}">
-
-    <link rel="stylesheet" href="{{ asset('assets/plugins/bootstrap/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/plugins/jvectormap/jquery-jvectormap-2.0.3.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('assets/plugins/morrisjs/morris.min.css') }}" />
-    <!-- Custom Css -->
-    <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/color_skins.css') }}">
-</head>
-
-<body class="theme-cyan">
-    <!-- Page Loader -->
-    <div class="page-loader-wrapper">
-        <div class="loader">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+      <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+      <meta name="keyword" content="{{ setting('meta_keyword') }}">
+      <meta name="description" content="{{ setting('meta_description') }}">
+      <meta name="setting_options" content="{{ setting('customization_json') }}">
+      <!-- CSRF Token -->
+      <meta name="csrf-token" content="{{ csrf_token() }}">
+      <meta name="app_name" content="{{ app_name() }}">
+      <meta name="data_table_limit" content="{{ setting('data_table_limit') ?? 10 }}">
+      <meta name="auth_user_roles" content="{{ auth()->user()->roles->pluck('name') }}">
+      <meta name="baseUrl" content="{{ url('/') }}" />
+      <title>@yield('title')</title>
+      <link rel="icon" href="{{ asset(setting('logo')) }}" type="image/x-icon">
+      <!-- Favicon-->
+      <link rel="apple-touch-icon" sizes="76x76" href="{{ asset(setting('favicon')) }}">
+      <!-- Shortcut Icon -->
+      <link rel="shortcut icon" href="{{ asset(setting('favicon') ?? 'images/logo/mini_logo.png') }}">
+      <link rel="icon" type="image/x-icon" href="{{ asset(setting('favicon') ?? 'images/logo/mini_logo.png') }}">
+      @stack('before-styles')
+      <link rel="stylesheet" href="{{ asset('assets/plugins/bootstrap/css/bootstrap.min.css') }}">
+      <link rel="stylesheet" href="{{ asset('assets/plugins/jvectormap/jquery-jvectormap-2.0.3.min.css') }}" />
+      <link rel="stylesheet" href="{{ asset('assets/plugins/morrisjs/morris.min.css') }}" />
+      <!-- Custom Css -->
+      <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
+      <link rel="stylesheet" href="{{ asset('assets/css/color_skins.css') }}">
+      @stack('after-styles')
+      @stack('head')
+   </head>
+   <body class="theme-cyan">
+      <!-- Page Loader -->
+      <div class="page-loader-wrapper">
+         <div class="loader">
             <div class="m-t-30"><img class="zmdi-hc-spin" src="{{ asset(Vendorsetting('mini_logo') ?? '/images/logo/mini_logo.png') }}" width="48"
-                    height="48" alt="{{ app_name() }}"></div>
+               height="48" alt="{{ app_name() }}"></div>
             <p>Please wait...</p>
-        </div>
-    </div>
-    <!-- Overlay For Sidebars -->
-    <div class="overlay"></div>
-
-    @include('backend.includes.constants')
-
-    <!-- Top Bar -->
-    @include('backend.includes.v2.nav')
-
-    <!-- Left Sidebar -->
-    @include('backend.includes.v2.sidebar')
-
-    <!-- Right Sidebar -->
-    {{-- @ include('backend.includes.v2.right-sidebar-settings') --}}
-
-    <!-- Chat-launcher -->
-    {{-- <div class="chat-launcher"></div> --}}
-    <div class="chat-wrapper">
-        <div class="card">
+         </div>
+      </div>
+      <!-- Overlay For Sidebars -->
+      <div class="overlay"></div>
+      @include('backend.includes.constants')
+      <!-- Top Bar -->
+      @include('backend.includes.v2.nav')
+      <!-- Left Sidebar -->
+      @include('backend.includes.v2.sidebar')
+      <!-- Right Sidebar -->
+      {{-- @ include('backend.includes.v2.right-sidebar-settings') --}}
+      <!-- Chat-launcher -->
+      {{-- 
+      <div class="chat-launcher"></div>
+      --}}
+      <div class="chat-wrapper">
+         <div class="card">
             <div class="header">
-                <ul class="list-unstyled team-info margin-0">
-                    <li class="m-r-15">
-                        <h2>Design Team</h2>
-                    </li>
-                    <li>
-                        <img src="{{ asset('assets/images/xs/avatar2.jpg') }}" alt="Avatar">
-                    </li>
-                    <li>
-                        <img src="{{ asset('assets/images/xs/avatar3.jpg') }}" alt="Avatar">
-                    </li>
-                    <li>
-                        <img src="{{ asset('assets/images/xs/avatar4.jpg') }}" alt="Avatar">
-                    </li>
-                    <li>
-                        <img src="{{ asset('assets/images/xs/avatar6.jpg') }}" alt="Avatar">
-                    </li>
-                    <li>
-                        <a href="javascript:void(0);" title="Add Member"><i class="zmdi zmdi-plus-circle"></i></a>
-                    </li>
-                </ul>
+               <ul class="list-unstyled team-info margin-0">
+                  <li class="m-r-15">
+                     <h2>Design Team</h2>
+                  </li>
+                  <li>
+                     <img src="{{ asset('assets/images/xs/avatar2.jpg') }}" alt="Avatar">
+                  </li>
+                  <li>
+                     <img src="{{ asset('assets/images/xs/avatar3.jpg') }}" alt="Avatar">
+                  </li>
+                  <li>
+                     <img src="{{ asset('assets/images/xs/avatar4.jpg') }}" alt="Avatar">
+                  </li>
+                  <li>
+                     <img src="{{ asset('assets/images/xs/avatar6.jpg') }}" alt="Avatar">
+                  </li>
+                  <li>
+                     <a href="javascript:void(0);" title="Add Member"><i class="zmdi zmdi-plus-circle"></i></a>
+                  </li>
+               </ul>
             </div>
             <div class="body">
-                <div class="chat-widget">
-                    <ul class="chat-scroll-list clearfix">
-                        <li class="left float-left">
-                            <img src="{{ asset('assets/images/xs/avatar3.jpg') }}" class="rounded-circle"
-                                alt="">
-                            <div class="chat-info">
-                                <a class="name" href="#">Alexander</a>
-                                <span class="datetime">6:12</span>
-                                <span class="message">Hello, John </span>
-                            </div>
-                        </li>
-                        <li class="right">
-                            <div class="chat-info"><span class="datetime">6:15</span> <span class="message">Hi,
-                                    Alexander<br> How are you!</span> </div>
-                        </li>
-                        <li class="right">
-                            <div class="chat-info"><span class="datetime">6:16</span> <span class="message">There are
-                                    many variations of passages of Lorem Ipsum available</span> </div>
-                        </li>
-                        <li class="left float-left"> <img src="{{ asset('assets/images/xs/avatar2.jpg') }}"
-                                class="rounded-circle" alt="">
-                            <div class="chat-info"> <a class="name" href="#">Elizabeth</a> <span
-                                    class="datetime">6:25</span> <span class="message">Hi, Alexander,<br> John <br>
-                                    What are you doing?</span> </div>
-                        </li>
-                        <li class="left float-left"> <img src="{{ asset('assets/images/xs/avatar1.jpg') }}"
-                                class="rounded-circle" alt="">
-                            <div class="chat-info"> <a class="name" href="#">Michael</a> <span
-                                    class="datetime">6:28</span> <span class="message">I would love to join the
-                                    team.</span> </div>
-                        </li>
-                        <li class="right">
-                            <div class="chat-info"><span class="datetime">7:02</span> <span class="message">Hello,
-                                    <br>Michael</span> </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="input-group p-t-15">
-                    <input type="text" class="form-control" placeholder="Enter text here...">
-                    <span class="input-group-addon">
-                        <i class="zmdi zmdi-mail-send"></i>
-                    </span>
-                </div>
+               <div class="chat-widget">
+                  <ul class="chat-scroll-list clearfix">
+                     <li class="left float-left">
+                        <img src="{{ asset('assets/images/xs/avatar3.jpg') }}" class="rounded-circle"
+                           alt="">
+                        <div class="chat-info">
+                           <a class="name" href="#">Alexander</a>
+                           <span class="datetime">6:12</span>
+                           <span class="message">Hello, John </span>
+                        </div>
+                     </li>
+                     <li class="right">
+                        <div class="chat-info"><span class="datetime">6:15</span> <span class="message">Hi,
+                           Alexander<br> How are you!</span> 
+                        </div>
+                     </li>
+                     <li class="right">
+                        <div class="chat-info"><span class="datetime">6:16</span> <span class="message">There are
+                           many variations of passages of Lorem Ipsum available</span> 
+                        </div>
+                     </li>
+                     <li class="left float-left">
+                        <img src="{{ asset('assets/images/xs/avatar2.jpg') }}"
+                           class="rounded-circle" alt="">
+                        <div class="chat-info"> <a class="name" href="#">Elizabeth</a> <span
+                           class="datetime">6:25</span> <span class="message">Hi, Alexander,<br> John <br>
+                           What are you doing?</span> 
+                        </div>
+                     </li>
+                     <li class="left float-left">
+                        <img src="{{ asset('assets/images/xs/avatar1.jpg') }}"
+                           class="rounded-circle" alt="">
+                        <div class="chat-info"> <a class="name" href="#">Michael</a> <span
+                           class="datetime">6:28</span> <span class="message">I would love to join the
+                           team.</span> 
+                        </div>
+                     </li>
+                     <li class="right">
+                        <div class="chat-info"><span class="datetime">7:02</span> <span class="message">Hello,
+                           <br>Michael</span> 
+                        </div>
+                     </li>
+                  </ul>
+               </div>
+               <div class="input-group p-t-15">
+                  <input type="text" class="form-control" placeholder="Enter text here...">
+                  <span class="input-group-addon">
+                  <i class="zmdi zmdi-mail-send"></i>
+                  </span>
+               </div>
             </div>
-        </div>
-    </div>
-
-    <section class="content home">
-        @yield('content')
-    </section>
-
-    <!-- Jquery Core Js -->
-    <script src="{{ asset('assets/bundles/libscripts.bundle.js') }}"></script> <!-- Lib Scripts Plugin Js ( jquery.v3.2.1, Bootstrap4 js) -->
-    <script src="{{ asset('assets/bundles/vendorscripts.bundle.js') }}"></script> <!-- slimscroll, waves Scripts Plugin Js -->
-
-    <script src="{{ asset('assets/bundles/morrisscripts.bundle.js') }}"></script><!-- Morris Plugin Js -->
-    <script src="{{ asset('assets/bundles/jvectormap.bundle.js') }}"></script> <!-- JVectorMap Plugin Js -->
-    <script src="{{ asset('assets/bundles/knob.bundle.js') }}"></script> <!-- Jquery Knob Plugin Js -->
-    <script src="{{ asset('assets/bundles/sparkline.bundle.js') }}"></script> <!-- Sparkline Plugin Js -->
-
-    <script src="{{ asset('assets/bundles/mainscripts.bundle.js') }}"></script>
-    <script src="{{ asset('assets/js/common/header-notifications.js') }}"></script>
-</body>
-
+         </div>
+      </div>
+      <section class="content home">
+         @yield('content')
+      </section>
+      @stack('before-scripts')
+      <!-- Jquery Core Js -->
+      <script src="{{ asset('assets/bundles/libscripts.bundle.js') }}"></script> <!-- Lib Scripts Plugin Js ( jquery.v3.2.1, Bootstrap4 js) -->
+      <script src="{{ asset('assets/bundles/vendorscripts.bundle.js') }}"></script> <!-- slimscroll, waves Scripts Plugin Js -->
+      <script src="{{ asset('assets/bundles/morrisscripts.bundle.js') }}"></script><!-- Morris Plugin Js -->
+      <script src="{{ asset('assets/bundles/jvectormap.bundle.js') }}"></script> <!-- JVectorMap Plugin Js -->
+      <script src="{{ asset('assets/bundles/knob.bundle.js') }}"></script> <!-- Jquery Knob Plugin Js -->
+      <script src="{{ asset('assets/bundles/sparkline.bundle.js') }}"></script> <!-- Sparkline Plugin Js -->
+      <script src="{{ asset('assets/bundles/mainscripts.bundle.js') }}"></script>
+      <script src="{{ asset('assets/js/common/header-notifications.js') }}"></script>
+      <script>
+         function formatCurrency(number, noOfDecimal, decimalSeparator, thousandSeparator, currencyPosition, currencySymbol) {
+         // Convert the number to a string with the desired decimal places
+         let formattedNumber = number.toFixed(noOfDecimal)
+         
+         // Split the number into integer and decimal parts
+         let [integerPart, decimalPart] = formattedNumber.split('.')
+         
+         // Add thousand separators to the integer part
+         integerPart = integerPart.replace(/\B(?=(\d{3})+(?!\d))/g, thousandSeparator)
+         
+         // Set decimalPart to an empty string if it is undefined
+         decimalPart = decimalPart || ''
+         
+         // Construct the final formatted currency string
+         let currencyString = ''
+         
+         if (currencyPosition === 'left' || currencyPosition === 'left_with_space') {
+         currencyString += currencySymbol
+         if (currencyPosition === 'left_with_space') {
+         currencyString += ' '
+         }
+         currencyString += integerPart
+         // Add decimal part and decimal separator if applicable
+         if (noOfDecimal > 0) {
+         currencyString += decimalSeparator + decimalPart
+         }
+         }
+         
+         if (currencyPosition === 'right' || currencyPosition === 'right_with_space') {
+         // Add decimal part and decimal separator if applicable
+         if (noOfDecimal > 0) {
+         currencyString += integerPart + decimalSeparator + decimalPart
+         }
+         if (currencyPosition === 'right_with_space') {
+         currencyString += ' '
+         }
+         currencyString += currencySymbol
+         }
+         
+         return currencyString
+         }
+         const currencyFormat = (amount) => {
+             const DEFAULT_CURRENCY = JSON.parse("{\u0022id\u0022:1,\u0022currency_name\u0022:\u0022Cedi\u0022,\u0022currency_symbol\u0022:\u0022GH\\u00a2\u0022,\u0022currency_code\u0022:\u0022GHS\u0022,\u0022is_primary\u0022:1,\u0022currency_position\u0022:\u0022left\u0022,\u0022no_of_decimal\u0022:2,\u0022thousand_separator\u0022:\u0022,\u0022,\u0022decimal_separator\u0022:\u0022.\u0022,\u0022created_by\u0022:1,\u0022updated_by\u0022:1,\u0022deleted_by\u0022:null,\u0022created_at\u0022:\u00222025-10-27T08:52:55.000000Z\u0022,\u0022updated_at\u0022:\u00222025-10-28T17:25:40.000000Z\u0022,\u0022deleted_at\u0022:null}")
+             const noOfDecimal = DEFAULT_CURRENCY ? DEFAULT_CURRENCY.no_of_decimal : 2
+             const decimalSeparator = DEFAULT_CURRENCY ? DEFAULT_CURRENCY.decimal_separator : '.'
+             const thousandSeparator = DEFAULT_CURRENCY ? DEFAULT_CURRENCY.thousand_separator : ','
+             const currencyPosition = DEFAULT_CURRENCY ? DEFAULT_CURRENCY.currency_position : 'left'
+             const currencySymbol = DEFAULT_CURRENCY ? DEFAULT_CURRENCY.currency_symbol : '$'
+             return formatCurrency(amount, noOfDecimal, decimalSeparator, thousandSeparator, currencyPosition,
+                 currencySymbol)
+         }
+         window.currencyFormat = currencyFormat
+         window.defaultCurrencySymbol = "GH\u00a2"    
+      </script>
+      <script>
+         const formatSuperadmin = (amount) => {
+             const DEFAULT_CURRENCY = JSON.parse("{\u0022id\u0022:1,\u0022currency_name\u0022:\u0022Cedi\u0022,\u0022currency_symbol\u0022:\u0022GH\\u00a2\u0022,\u0022currency_code\u0022:\u0022GHS\u0022,\u0022is_primary\u0022:1,\u0022currency_position\u0022:\u0022left\u0022,\u0022no_of_decimal\u0022:2,\u0022thousand_separator\u0022:\u0022,\u0022,\u0022decimal_separator\u0022:\u0022.\u0022,\u0022created_by\u0022:1,\u0022updated_by\u0022:1,\u0022deleted_by\u0022:null,\u0022created_at\u0022:\u00222025-10-27T08:52:55.000000Z\u0022,\u0022updated_at\u0022:\u00222025-10-28T17:25:40.000000Z\u0022,\u0022deleted_at\u0022:null}")
+             const noOfDecimal = DEFAULT_CURRENCY ? DEFAULT_CURRENCY.no_of_decimal : 2
+             const decimalSeparator = DEFAULT_CURRENCY ? DEFAULT_CURRENCY.decimal_separator : '.'
+             const thousandSeparator = DEFAULT_CURRENCY ? DEFAULT_CURRENCY.thousand_separator : ','
+             const currencyPosition = DEFAULT_CURRENCY ? DEFAULT_CURRENCY.currency_position : 'left'
+             const currencySymbol = DEFAULT_CURRENCY ? DEFAULT_CURRENCY.currency_symbol : '$'
+             return formatCurrency(amount, noOfDecimal, decimalSeparator, thousandSeparator, currencyPosition,
+                 currencySymbol)
+         }
+         window.formatSuperadmin = formatSuperadmin
+         window.defaultCurrencySymbol = "GH\u00a2"    
+      </script>
+      @stack('after-scripts')
+   </body>
 </html>
