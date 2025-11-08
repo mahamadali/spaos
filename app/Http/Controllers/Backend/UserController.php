@@ -76,7 +76,7 @@ class UserController extends Controller
         }
         return $datatable->eloquent($query)
             ->addColumn('check', function ($row) {
-                return '<input type="checkbox" class="form-check-input select-table-row "  id="datatable-row-' . $row->id . '"  name="datatable_ids[]" value="' . $row->id . '" onclick="dataTableRowCheck(' . $row->id . ')">';
+                return '<div class="checkbox"><input type="checkbox" class="select-table-row "  id="datatable-row-' . $row->id . '"  name="datatable_ids[]" value="' . $row->id . '" onclick="dataTableRowCheck(' . $row->id . ')"><label for="datatable-row-' . $row->id . '"></label></div>';
             })
             ->addColumn('name', function ($data) {
                 return $data->getFullNameAttribute();

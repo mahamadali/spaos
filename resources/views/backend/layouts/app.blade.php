@@ -33,6 +33,8 @@
 
       <link rel="stylesheet" href="{{ mix('css/icon.min.css') }}">
 
+      <link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}">
+
       <style>
         :root {
             <?php
