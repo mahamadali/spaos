@@ -9,73 +9,99 @@
 <link rel="stylesheet" href="{{ mix('modules/constant/style.css') }}">
 @endpush
 @section('content')
-<div class="row mb-4">
-    <!-- Total Subscriptions Card -->
-    <div class="col-md-3">
-        <div class="dashboard-cards services p-5 bg-primary-subtle rounded">
-            <div class="d-flex align-items-center justify-content-between title">
-                <h2 class="text-primary fw-semibold mb-0">
-                    {{ $activeSubscriptions + $expiredSubscriptions + $pendingSubscriptions }}
-                </h2>
-                <div class="dashboard-icon fs-4" data-bs-toggle="tooltip"
-                    data-bs-title="{{ __('dashboard.total_subscriptions') }}">
-                    <i class="fa-solid fa-bars"></i>
-                </div>
-            </div>
-            <h5 class="mb-0">{{ __('dashboard.total_subscriptions') }}</h5>
-        </div>
-    </div>
 
-    <!-- Active Subscriptions Card -->
-    <div class="col-md-3">
-        <a href="{{ route('backend.subscriptions.index') }}" class="text-decoration-none">
-            <div class="dashboard-cards services p-5 bg-primary-subtle rounded">
-                <div class="d-flex align-items-center justify-content-between title">
-                    <h2 class="text-primary fw-semibold mb-0">{{ $activeSubscriptions ?? 0 }}</h2>
-                    <div class="dashboard-icon fs-4" data-bs-toggle="tooltip"
-                        data-bs-title="{{ __('dashboard.total_active_subscriptions') }}">
-                        <i class="fa-solid fa-web-awesome"></i>
-                    </div>
-                </div>
-                <h5 class="mb-0">{{ __('dashboard.total_active_subscriptions') }}</h5>
-            </div>
-        </a>
-    </div>
-
-    <!-- Expired Subscriptions Card -->
-    <div class="col-md-3">
-        <a href="{{ route('backend.subscriptions.expired') }}" class="text-decoration-none">
-            <div class="dashboard-cards services p-5 bg-primary-subtle rounded">
-                <div class="d-flex align-items-center justify-content-between title">
-                    <h2 class="text-primary fw-semibold mb-0">{{ $expiredSubscriptions ?? 0 }}</h2>
-                    <div class="dashboard-icon fs-4" data-bs-toggle="tooltip"
-                        data-bs-title="{{ __('dashboard.total_expired_subscriptions') }}">
-                        <i class="fa-solid fa-calendar-xmark"></i>
-
-                    </div>
-                </div>
-                <h5 class="mb-0">{{ __('dashboard.total_expired_subscriptions') }}</h5>
-            </div>
-        </a>
-    </div>
-
-    <!-- Pending Subscriptions Card -->
-    <div class="col-md-3">
-        <a href="{{ route('backend.subscriptions.pending') }}" class="text-decoration-none">
-            <div class="dashboard-cards services p-5 bg-primary-subtle rounded">
-                <div class="d-flex align-items-center justify-content-between title">
-                    <h2 class="text-primary fw-semibold mb-0">{{ $pendingSubscriptions ?? 0 }}</h2>
-                    <div class="dashboard-icon fs-4" data-bs-toggle="tooltip"
-                        data-bs-title="{{ __('dashboard.total_pending_subscriptions') }}">
-                        <i class="fa-solid fa-exclamation"></i>
-
-                    </div>
-                </div>
-                <h5 class="mb-0">{{ __('dashboard.total_pending_subscriptions') }}</h5>
-            </div>
-        </a>
-    </div>
+<div class="block-header">
+   <div class="row">
+      <div class="col-lg-7 col-md-6 col-sm-12">
+         <h2>{{ __($module_action) }}
+            <small class="text-muted">{{ config('app.name') }}</small>
+         </h2>
+      </div>
+   </div>
 </div>
+
+<div class="container-fluid">
+
+    <div class="card widget_2">
+      <ul class="row clearfix list-unstyled m-b-0">
+         <li class="col-lg-3 col-md-6 col-sm-12">
+            <div class="body">
+               <div class="row">
+                  <div class="col-7">
+                     <h5 class="m-t-0">{{ __('dashboard.lbl_total_subscription') }}</h5>
+                     <a href="{{ route('backend.subscriptions.all_subscription')}}">
+                     <button
+                        class="btn btn-success btn-icon btn-round hidden-sm-down">
+                     <i class="zmdi zmdi-accounts-list"></i>
+                     </button>
+                     </a>
+                  </div>
+                  <div class="col-5 text-right">
+                     <h2 class="">{{ $activeSubscriptions + $expiredSubscriptions + $pendingSubscriptions }}</h2>
+                     <small class="info">{{ __('so_far') }}</small>
+                  </div>
+               </div>
+            </div>
+         </li>
+         <li class="col-lg-3 col-md-6 col-sm-12">
+            <div class="body">
+               <div class="row">
+                  <div class="col-7">
+                     <h5 class="m-t-0">{{ __('dashboard.lbl_tot_active_subscription') }}</h5>
+                     <a href="{{ route('backend.subscriptions.index')}}">
+                     <button
+                        class="btn btn-success btn-icon btn-round hidden-sm-down">
+                     <i class="zmdi zmdi-accounts-list"></i>
+                     </button>
+                     </a>
+                  </div>
+                  <div class="col-5 text-right">
+                     <h2 class="">{{ $activeSubscriptions }}</h2>
+                     <small class="info">{{ __('so_far') }}</small>
+                  </div>
+               </div>
+            </div>
+         </li>
+         <li class="col-lg-3 col-md-6 col-sm-12">
+            <div class="body">
+               <div class="row">
+                  <div class="col-7">
+                     <h5 class="m-t-0">{{ __('dashboard.lbl_total_pending_subscription') }}</h5>
+                     <a href="{{ route('backend.subscriptions.pending')}}">
+                     <button
+                        class="btn btn-success btn-icon btn-round hidden-sm-down">
+                     <i class="zmdi zmdi-accounts-list"></i>
+                     </button>
+                     </a>
+                  </div>
+                  <div class="col-5 text-right">
+                     <h2 class="">{{ $pendingSubscriptions }}</h2>
+                     <small class="info">{{ __('so_far') }}</small>
+                  </div>
+               </div>
+            </div>
+         </li>
+         <li class="col-lg-3 col-md-6 col-sm-12">
+            <div class="body">
+               <div class="row">
+                  <div class="col-7">
+                     <h5 class="m-t-0">{{ __('dashboard.expiring_soon') }}</h5>
+                     <a href="{{ route('backend.subscriptions.all_subscription')}}">
+                     <button
+                        class="btn btn-success btn-icon btn-round hidden-sm-down">
+                     <i class="zmdi zmdi-accounts-list"></i>
+                     </button>
+                     </a>
+                  </div>
+                  <div class="col-5 text-right">
+                     <h2 class="">{{ $expiredSubscriptions }}</h2>
+                     <small class="info">{{ __('so_far') }}</small>
+                  </div>
+               </div>
+            </div>
+         </li>
+      </ul>
+   </div>
 
 <div class="card">
     <div class="card-header">
@@ -142,6 +168,7 @@
 
 
 
+</div>
 </div>
 @endsection
 
