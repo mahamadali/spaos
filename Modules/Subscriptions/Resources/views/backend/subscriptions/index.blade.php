@@ -9,15 +9,20 @@
     <link rel="stylesheet" href="{{ mix('modules/constant/style.css') }}">
 @endpush
 @section('content')
-    <div class="card">
-        <div class="card-header">
-            <x-backend.section-header>
-                <h3 class="mb-0">{{ __($module_action) }}</h3>
-                <x-slot name="subtitle">
-                    @lang(':module_name Data For Status, List etc.', ['module_name' => Str::title($module_name)])
-                </x-slot>
-            </x-backend.section-header>
+
+    <div class="block-header">
+        <div class="row">
+            <div class="col-lg-7 col-md-6 col-sm-12">
+                <h2>{{ __($module_action) }}
+                    <small class="text-muted">{{ config('app.name') }}</small>
+                </h2>
+            </div>
         </div>
+        </div>
+
+        <div class="container-fluid">
+
+    <div class="card">
         <div class="card-body">
             <div class="row mb-3">
                 <div class="col-lg-3 col-md-4">
@@ -62,6 +67,7 @@
 
 
     </div>
+        </div>
 @endsection
 
 @push('after-styles')
