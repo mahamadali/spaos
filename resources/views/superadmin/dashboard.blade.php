@@ -369,19 +369,12 @@
    }
    
             // Dropdown click event listener
-            //    $(document).on('click', '.revenue-dropdown-item', function() {
-            //        const selectedText = $(this).text();
-            //        $('.total_revenue').text(selectedText);
-            //        var type = $(this).data('type');
-            //        revanue_chart(type); // Fetch and update the chart based on the selected type
-            //    });
-    $(document).on('change', '.revenue-dropdown-select', function() {
-        const selectedOption = $(this).find('option:selected');
-        const selectedText = selectedOption.text();
-        $('.total_revenue').text(selectedText);
-        var type = selectedOption.data('type');
-        revanue_chart(type); // Same behavior as click
-    });
+               $(document).on('click', '.revenue-dropdown-item', function() {
+                   const selectedText = $(this).text();
+                   $('.total_revenue').text(selectedText);
+                   var type = $(this).data('type');
+                   revanue_chart(type); // Fetch and update the chart based on the selected type
+               });
    
     document.addEventListener('DOMContentLoaded', function() {
         flatpickr('.dashboard-date-range', {

@@ -4,25 +4,34 @@
     {{ $module_title }}
 @endsection
 
-
-@push('after-styles')
-    <link rel="stylesheet" href="{{ mix('modules/constant/style.css') }}">
-@endpush
 @section('content')
+
+    <div class="block-header">
+        <div class="row">
+            <div class="col-lg-7 col-md-6 col-sm-12">
+                <h2>{{ __('messages.vendors') }}
+                    <small class="text-muted">{{ config('app.name') }}</small>
+                </h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+
     <div class="card">
         <div class="card-body">
 
             <div class="d-flex justify-content-between flex-wrap gap-3 align-items-center">
                 <x-backend.quick-action url="{{ route('backend.users.bulk_action') }}">
                     <div class="">
-                        <select name="action_type" class="form-select select2 col-12" id="quick-action-type">
+                        <select name="action_type" class="form-control show-tick  col-12" id="quick-action-type">
                             <option selected disabled value="">{{ __('messages.no_action') }}</option>
                             <option value="change-status">{{ __('messages.status') }}</option>
                             <option value="delete">{{ __('messages.delete') }}</option>
                         </select>
                     </div>
                     <div class="select-status d-none quick-action-field" id="change-status-action">
-                        <select name="status" class="form-select select2" id="status">
+                        <select name="status" class="form-select " id="status">
                             <option value="1" selected>{{ __('messages.active') }}</option>
                             <option value="0">{{ __('messages.inactive') }}</option>
                         </select>
@@ -32,7 +41,7 @@
                     <x-slot name="toolbar">
                         <div>
                             <div class="datatable-filter">
-                                <select name="column_status" id="column_status" class="select2" data-filter="select">
+                                <select name="column_status" id="column_status" class="" data-filter="select">
                                     <option value="">{{ __('messages.all') }}</option>
                                     <option value="0">{{ __('messages.inactive') }}</option>
                                     <option value="1">{{ __('messages.active') }}
@@ -66,19 +75,16 @@
     <div data-render="app">
 
     </div>
+    </div>
 @endsection
 
 @push('after-styles')
     <!-- DataTables Core and Extensions -->
-    <link rel="stylesheet" href="{{ asset('vendor/datatable/datatables.min.css') }}">
 @endpush
 
 @push('after-scripts')
     <script src="{{ mix('js/vue.min.js') }}"></script>
     <script src="{{ asset('js/form-offcanvas/index.js') }}" defer></script>
-
-    <!-- DataTables Core and Extensions -->
-    <script type="text/javascript" src="{{ asset('vendor/datatable/datatables.min.js') }}"></script>
 
     <script type="text/javascript" defer>
         const columns = [{
