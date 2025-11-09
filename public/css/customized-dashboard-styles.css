@@ -338,3 +338,56 @@ table.dataTable.table>tbody>tr:nth-of-type(odd)>* {
 .sidebar {
     border-radius: 0px !important;
 }
+
+/* --- Minimal stat-card polish --- */
+.dashboard-cards{
+  border-radius:16px;
+  background:#fff;
+  box-shadow:0 6px 18px rgba(0,0,0,.06);
+  border:1px solid rgba(0,0,0,.06);
+  transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.dashboard-cards:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 28px rgba(0,0,0,.10);
+  border-color:rgba(13,110,253,.22);
+}
+
+/* compact title row + strong number */
+.dashboard-cards .title{margin-bottom:.25rem; gap:.75rem;}
+.dashboard-cards .title h2{font-weight:700; margin:0;}
+.dashboard-cards h5{margin:.25rem 0 0; font-weight:600;}
+
+/* neat icon badge */
+.dashboard-cards .dashboard-icon{
+  display:inline-flex; align-items:center; justify-content:center;
+  width:38px; height:38px; border-radius:12px;
+  color:#0d6efd; background:rgba(13,110,253,.12);
+  transition:transform .18s ease;
+}
+.dashboard-cards:hover .dashboard-icon{ transform:translateY(-1px); }
+.dashboard-cards .dashboard-icon svg{ width:20px; height:20px; display:block; }
+
+/* nicer “primary subtle” fill */
+.dashboard-cards.bg-primary-subtle{
+  background: linear-gradient(180deg, rgba(13,110,253,.06), rgba(13,110,253,.03)), #fff;
+  border-color: rgba(13,110,253,.18);
+}
+
+/* make whole card link feel natural */
+.col-md-6.col-lg-3 > a{ text-decoration:none; color:inherit; }
+
+/* responsive padding nudge (optional; keeps your p-5 usable on mobile) */
+@media (max-width:576px){
+  .dashboard-cards.p-5{ padding:1.25rem !important; }
+}
+
+/* dark mode (optional, Bootstrap 5.3+ with data-bs-theme="dark") */
+[data-bs-theme="dark"] .dashboard-cards{
+  background:#0f1115; border-color:rgba(255,255,255,.08);
+  box-shadow:0 6px 18px rgba(0,0,0,.35);
+}
+[data-bs-theme="dark"] .dashboard-cards.bg-primary-subtle{
+  background: linear-gradient(180deg, rgba(13,110,253,.14), rgba(13,110,253,.06)), #0f1115;
+  border-color: rgba(13,110,253,.22);
+}
