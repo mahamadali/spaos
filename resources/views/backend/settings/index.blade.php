@@ -32,4 +32,10 @@
 @endpush
 @push('after-scripts')
 <script src="{{ asset('js/setting-vue.min.js')}}"></script>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $("div#Settings.customization").remove();
+  });
+</script>
 @endpush

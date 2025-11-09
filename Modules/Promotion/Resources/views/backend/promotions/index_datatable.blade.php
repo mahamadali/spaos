@@ -129,7 +129,7 @@
             }, {
                 name: 'check',
                 data: 'check',
-                title: '<input type="checkbox" class="form-check-input" name="select_all_table" id="select-all-table" onclick="selectAllTable(this)">',
+                title: '<div class="checkbox"><input type="checkbox" id="select-all-table" class="" name="select_all_table" onclick="selectAllTable(this)"><label for="select-all-table"></label></div>',
                 width: '0%',
                 exportable: false,
                 orderable: false,

@@ -134,7 +134,9 @@ class PromotionsController extends Controller
 
         return Datatables::of($query)
             ->addColumn('check', function ($data) {
-                return '<input type="checkbox" class="form-check-input select-table-row"  id="datatable-row-' . $data->id . '"  name="datatable_ids[]" value="' . $data->id . '" onclick="dataTableRowCheck(' . $data->id . ')">';
+                // return '<input type="checkbox" class="form-check-input select-table-row"  id="datatable-row-' . $data->id . '"  name="datatable_ids[]" value="' . $data->id . '" onclick="dataTableRowCheck(' . $data->id . ')">';
+
+                return '<div class="checkbox"><input type="checkbox" class="select-table-row "  id="datatable-row-' . $data->id . '"  name="datatable_ids[]" value="' . $data->id . '" onclick="dataTableRowCheck(' . $data->id . ')"><label for="datatable-row-' . $data->id . '"></label></div>';
             })
             ->addColumn('action', function ($data) {
                 return view('promotion::backend.promotions.action_column', compact('data'));

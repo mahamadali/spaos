@@ -128,7 +128,7 @@ class PaymentController extends Controller
                 }
             })
             ->addColumn('check', function ($data) {
-                return ($data->status == 0) ? '<input type="checkbox" class="form-check-input select-table-row " name="select_payment" value="'.$data->id.'" data-id="'.$data->id.'">' : '';
+                return ($data->status == 0) ? '<div class="checkbox"><input type="checkbox" class="select-table-row " name="select_payment" value="'.$data->id.'" data-id="'.$data->id.'" id="datatable-row-' . $data->id . '"><label for="datatable-row-' . $data->id . '"></label></div>' : '';
             })
             ->addColumn('image', function ($data) {
                 // Check if the image exists and return an img tag or a placeholder
