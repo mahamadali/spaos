@@ -2,6 +2,9 @@
 @section('title')
 {{ 'Dashboard' }}
 @endsection
+@push('after-styles')
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+@endpush
 @section('content')
 <div class="block-header">
    <div class="row">
@@ -266,6 +269,7 @@
 </div>
 @endsection
 @push('after-scripts')
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 <!-- apexchart -->
 <script src="{{ mix('js/apexcharts.min.js') }}"></script>
 <script>
