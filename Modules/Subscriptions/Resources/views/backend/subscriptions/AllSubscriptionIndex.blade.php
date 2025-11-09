@@ -220,12 +220,9 @@
           previous: window.translations.paginate.previous
         }
       },
-                dom:
-                '<"table-responsive" t>' +
-                '<"row align-items-center mt-2"' +
-                    '<"col-md-6"i>' +
-                    '<"col-md-6 text-md-right"p>' +
-                '>',
+                dom: '<"row"<"col-12" B>>' +  // Move export buttons to the top
+                    '<"table-responsive my-3" rt>' +  // Keep the table in the middle
+                    '<"row align-items-center data_table_widgets"<"col-md-6" <"d-flex align-items-center flex-wrap gap-3" l i>><"col-md-6" p>>', // Keep the length menu and search box below the table
                 ajax: {
                     url: '{{ route("backend.subscriptions.all_subscription_data") }}',
                     data: function(d) {
