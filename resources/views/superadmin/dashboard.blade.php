@@ -1,4 +1,4 @@
-@extends('backend.layouts.app-v2', ['isBanner' => false])
+@extends('backend.layouts.app', ['isBanner' => false])
 
 @section('title')
     {{ 'Dashboard' }}
