@@ -234,7 +234,7 @@
     window.renderedDataTable = $('#datatable').DataTable({
       processing: true,
       serverSide: true,
-      autoWidth: false,
+      autoWidth: true,
       responsive: true,
       fixedHeader: true,
       lengthMenu: [
