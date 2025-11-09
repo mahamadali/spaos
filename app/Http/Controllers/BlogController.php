@@ -58,6 +58,9 @@ class BlogController extends Controller
                 return $this->formatTextWithShowMore($data->title, $data->id, 'title');
             })
             ->editColumn('auther_id', function ($data) {
+                if (empty($data->user))
+                    return '-';
+
                 return $data->user->first_name . ' ' . $data->user->last_name;
             })
             ->filterColumn('auther_id', function ($query, $keyword) {
