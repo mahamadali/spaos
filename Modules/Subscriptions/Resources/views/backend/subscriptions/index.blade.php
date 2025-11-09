@@ -161,7 +161,9 @@
                     }
                 ],
                 drawCallback: function() {
-                    
+                    if (laravel !== undefined) {
+                        window.laravel.initialize();
+                    }
                 },
                 columns: [
                     // { data: 'start_date', name: 'start_date', title:"{{ __('frontend.date') }}" },
