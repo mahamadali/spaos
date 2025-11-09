@@ -24,8 +24,8 @@
             <div class="d-flex justify-content-between flex-wrap gap-3 align-items-center">
                 <x-backend.quick-action url="{{ route('backend.users.bulk_action') }}">
                     <div class="">
-                        <select name="action_type" class="form-control show-tick" id="quick-action-type">
-                            <option selected value="">{{ __('messages.no_action') }}</option>
+                        <select name="action_type" class="form-control show-tick  col-12" id="quick-action-type">
+                            <option selected disabled value="">{{ __('messages.no_action') }}</option>
                             <option value="change-status">{{ __('messages.status') }}</option>
                             <option value="delete">{{ __('messages.delete') }}</option>
                         </select>
@@ -95,8 +95,8 @@
             {
                 name: 'check',
                 data: 'check',
-                title: '<div class="checkbox"><input type="checkbox" name="select_all_table" id="select-all-table" onclick="selectAllTable(this)"><label for="select-all-table"></label></div>',
-                className: 'text-center pt-0',
+                title: '<input type="checkbox" class="form-check-input" name="select_all_table" id="select-all-table" onclick="selectAllTable(this)">',
+                width: '0%',
                 exportable: false,
                 orderable: false,
                 searchable: false,
