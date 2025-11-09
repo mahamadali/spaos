@@ -224,6 +224,7 @@
       document.getElementById('select-all-table').indeterminate = false
       $('#quick-action-form')[0].reset()
       $('#quick-actions').find('input, textarea, button, select').attr('disabled', 'disabled')
+      $('#quick-action-form').find('select').select2('destroy').select2().val(null).trigger('change')
     }
   }
 
@@ -404,31 +405,4 @@
       }
     });
   }
-
-  const snackbarMessage = () => {
-    const PRIMARY_COLOR = window.getComputedStyle(document.querySelector('html')).getPropertyValue('--bs-success').trim()
-    const DANGER_COLOR = window.getComputedStyle(document.querySelector('html')).getPropertyValue('--bs-danger').trim()
-
-    const successSnackbar = (message) => {
-      Snackbar.show({
-        text: message,
-        pos: 'bottom-left',
-        actionTextColor: PRIMARY_COLOR,
-        duration: 2500
-      })
-    }
-    window.successSnackbar = successSnackbar
-
-    const errorSnackbar = (message) => {
-      Snackbar.show({
-        text: message,
-        pos: 'bottom-left',
-        actionTextColor: '#FFFFFF',
-        backgroundColor: DANGER_COLOR,
-        duration: 2500
-      })
-    }
-    window.errorSnackbar = errorSnackbar
-  }
-  snackbarMessage()
 })()

@@ -31,7 +31,6 @@
       <link rel="stylesheet" href="{{ asset('assets/css/color_skins.css') }}">
       <link rel="stylesheet" href="{{ asset('assets/plugins/jquery-datatable/dataTables.bootstrap4.min.css') }}">
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css">
 
       <link rel="stylesheet" href="{{ mix('css/icon.min.css') }}">
 
@@ -231,7 +230,6 @@
       <script src="{{ asset('assets/bundles/sparkline.bundle.js') }}"></script> <!-- Sparkline Plugin Js -->
       <script src="{{ asset('assets/bundles/mainscripts.bundle.js') }}"></script>
       <script src="{{ asset('assets/js/common/header-notifications.js') }}"></script>
-      <script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script>
       <script src="{{ asset('assets/js/common/app.js') }}"></script>
     
     <script>

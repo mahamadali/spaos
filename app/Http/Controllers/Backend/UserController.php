@@ -88,9 +88,8 @@ class UserController extends Controller
                 }
 
                 return '
-                <div class="checkbox">
-                    <input type="checkbox" data-url="' . route('backend.users.update_status', $row->id) . '" data-token="' . csrf_token() . '" class="switch-status-change form-check-input"  id="status-datatable-row-' . $row->id . '"  name="status" value="' . $row->id . '" ' . $checked . '>
-                    <label for="status-datatable-row-' . $row->id . '"></label>
+                <div class="form-check form-switch ">
+                    <input type="checkbox" data-url="' . route('backend.users.update_status', $row->id) . '" data-token="' . csrf_token() . '" class="switch-status-change form-check-input"  id="datatable-row-' . $row->id . '"  name="status" value="' . $row->id . '" ' . $checked . '>
                 </div>
                ';
             })
