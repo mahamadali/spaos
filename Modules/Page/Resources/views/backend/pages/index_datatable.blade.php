@@ -51,7 +51,7 @@
                     @endhasPermission
                 </x-slot>
             </x-backend.section-header>
-            <table id="datatable" class="table table-bordered table-striped table-hover js-basic-example dataTable">
+            <table id="datatable" class="table table-striped border table-responsive">
             </table>
         </div>
     </div>
