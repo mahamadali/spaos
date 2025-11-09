@@ -9,16 +9,12 @@
     </a>
 </li>
 
-<li class="header">{{ __('dashboard.users') }}</li>
-
 <li class="nav-item {{ request()->routeIs('backend.users.index') ? 'active' : '' }}">
     <a target="_self" class="nav-link {{ request()->routeIs('backend.users.index') ? 'active' : '' }}" href="{{ route('backend.users.index') }}">
         <i class="zmdi zmdi-accounts" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Users" data-bs-original-title="Vendors"></i>
         <span class="item-name">{{ __('messages.vendors') }}</span>
     </a>
 </li>
-
-<li class="header">{{ __('dashboard.subscription') }}</li>
 
 @php
     $subscriptionsActive = request()->is('app/subscriptions*') && !request()->routeIs('backend.subscriptions.all_subscription');
@@ -57,8 +53,6 @@
     </ul>
 </li>
 
-<li class="header">{{ __('dashboard.plans') }}</li>
-
 <li class="nav-item {{ request()->routeIs('backend.subscription.plans.index') ? 'active' : '' }}">
     <a target="_self" class="nav-link {{ request()->routeIs('backend.subscription.plans.index') ? 'active' : '' }}" href="{{ route('backend.subscription.plans.index') }}">
         <i class="zmdi zmdi-layers" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Plans" data-bs-original-title="Plans"></i>
@@ -66,16 +60,12 @@
     </a>
 </li>
 
-<li class="header">{{ __('dashboard.payment') }}</li>
-
 <li class="nav-item {{ request()->routeIs('backend.payment.index') ? 'active' : '' }}">
     <a target="_self" class="nav-link {{ request()->routeIs('backend.payment.index') ? 'active' : '' }}" href="{{ route('backend.payment.index') }}">
         <i class="zmdi zmdi-card" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Payments" data-bs-original-title="Payments"></i>
         <span class="item-name">{{ __('sidebar.payments') }}</span>
     </a>
 </li>
-
-<li class="header">{{ __('dashboard.copoun') }}</li>
 
 <li class="nav-item {{ request()->routeIs('backend.promotions.index') ? 'active' : '' }}">
     <a target="_self" class="nav-link {{ request()->routeIs('backend.promotions.index') ? 'active' : '' }}" href="{{ route('backend.promotions.index') }}">
