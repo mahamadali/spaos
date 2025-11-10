@@ -1,7 +1,7 @@
 <div class="section-spacing-bottom">
     <div class="container-fluid">
         <div class="section-title text-center">
-            <span class="decorator-title decorator-font text-primary text-uppercase text-decoration-underline">{{__('frontend.why_frezka')}}</span>
+            <span class="decorator-title decorator-font text-primary text-uppercase text-decoration-underline">{{__('frontend.why_frezka',['app' => setting('app_name')])}}</span>
             <h4 class="title">{{__('frontend.quick_go_through_about_frezka',['app' => setting('app_name')])}}</h4>
         </div>
         <div class="video-wrapper">
