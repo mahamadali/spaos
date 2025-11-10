@@ -72,19 +72,19 @@ h1, h2, h3, h4, h5, h6 {
 
 /* number in title */
 .dashboard-cards .title h2 {
-    font-size: 36px;
-    font-weight: 700;
-    color: #1b1c21 !important;
+    font-size: 32px;
+    font-weight: 400;
+    color: #4c5fbe !important;
     margin: 0;
     line-height: 1;
 }
 
 /* label text under number */
 .dashboard-cards h5 {
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 14px;
+    font-weight: 400;
     margin-top: 18px;
-    color: #55565a !important;
+    color: #c0ac70 !important;
 }
 
 /* icon circle */
@@ -92,7 +92,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 42px;
     height: 42px;
     border-radius: 50%;
-    background: #f4efff; /* pastel purple */
+    background: #c7c8fd; /* pastel purple */
     display: flex;
     align-items: center;
     justify-content: center;
