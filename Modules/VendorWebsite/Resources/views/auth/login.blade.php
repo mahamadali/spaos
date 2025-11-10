@@ -54,7 +54,7 @@
                                                     class="text-danger">*</span></label>
                                             <div class="input-group custom-input-group">
                                                 <input type="email" name="email" value="olivia.davis@gmail.com"
-                                                    id="email" class="form-control" placeholder="demo@gmail.com"
+                                                    id="email" class="form-control" placeholder="{{ __('vendorwebsite.email') }}"
                                                     required />
                                                 <span class="input-group-text"><i class="ph ph-envelope-simple"></i></span>
                                             </div>
@@ -69,7 +69,7 @@
                                                     class="text-danger">*</span></label>
                                             <div class="input-group custom-input-group">
                                                 <input type="password" value="12345678" name="password" id="password"
-                                                    class="form-control" placeholder="eg #123@Abc" required />
+                                                    class="form-control" placeholder="{{ __('vendorwebsite.password') }}" required />
                                                 <span class="input-group-text" id="togglePassword">
                                                     <i class="ph ph-eye-slash" id="toggleIcon"></i>
                                                 </span>
