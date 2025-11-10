@@ -194,6 +194,8 @@ document.addEventListener('DOMContentLoaded', function() {
             utilsScript: "/node_modules/intl-tel-input/build/js/utils.js",
         });
 
+        input.setAttribute("placeholder", "501 234 567");
+
         // Validation
         input.addEventListener('input', function() {
             if (iti.isValidNumber()) {

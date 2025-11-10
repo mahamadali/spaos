@@ -267,6 +267,8 @@
 
             });
 
+            input.setAttribute("placeholder", "501 234 567");
+
             // Initialize intl-tel-input AFTER setting styles
             const input = document.querySelector("#mobile");
             window.intlTelInput(input, {
@@ -274,6 +276,8 @@
                 separateDialCode: true,
                 utilsScript: baseUrl + "/node_modules/intl-tel-input/build/js/utils.js"
             });
+
+            input.setAttribute("placeholder", "501 234 567");
         });
 
 

@@ -27,7 +27,7 @@
                                     </div>
                                 </a>
                                 <h5 class="mb-1 register-title">{{ __('vendorwebsite.welcome_back') }}</h5>
-                                <p class="font-size-14 mb-5">{{ __('vendorwebsite.you_have_been_missed_for_long_time') }}
+                                {{-- <p class="font-size-14 mb-5">{{ __('vendorwebsite.you_have_been_missed_for_long_time') }} --}}
                                 </p>
 
                             </div>

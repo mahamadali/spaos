@@ -498,6 +498,8 @@
         utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js"
     });
 
+    mobileInput.setAttribute("placeholder", "501 234 567");
+
     // Add digit-only validation for mobile input
     mobileInput.addEventListener('input', function(e) {
         var value = this.value;
@@ -516,6 +518,8 @@
         separateDialCode: true,
         utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js"
     });
+
+    edit_mobileInput.setAttribute("placeholder", "501 234 567");
 
     // Add digit-only validation for mobile input
     edit_mobileInput.addEventListener('input', function(e) {

@@ -219,6 +219,8 @@ document.addEventListener('DOMContentLoaded', function() {
             utilsScript: "/node_modules/intl-tel-input/build/js/utils.js",
         });
 
+        input.setAttribute("placeholder", "501 234 567");
+
         // Store iti instance globally if needed
         window.iti = iti;
 

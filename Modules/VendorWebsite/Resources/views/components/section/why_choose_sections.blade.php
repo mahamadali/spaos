@@ -5,9 +5,9 @@
                 <div class="col-xl-5 col-lg-6">
                     <div class="section-title">
                         <span class="decorator-title decorator-font text-primary text-uppercase text-decoration-underline">
-                            {{ $whyChoose?->subtitle ?? 'why frezka' }}
+                            {{ $whyChoose?->subtitle ?? 'why ' . (config('app.name', 'SpaOS')) }}
                         </span>
-                        <h4 class="title">{{ $whyChoose?->title ?? 'Why Choose Frezka' }}</h4>
+                        <h4 class="title">{{ $whyChoose?->title ?? 'Why Choose ' . (config('app.name', 'SpaOS')) }}</h4>
                         <p class="mb-0 mt-2 text-body">{{ $whyChoose?->description ?? 'With an intuitive booking system, expert selection, & exclusive offers, our all-in-one platform ensures seamless operations while enhancing customer loyalty.' }}</p>
                     </div>
                     @php

@@ -162,11 +162,14 @@
 
     <script>
         $(document).ready(function() {
-            var iti = window.intlTelInput(document.querySelector("#mobile"), {
+            const input = document.querySelector("#mobile");
+            var iti = window.intlTelInput(input, {
                 initialCountry: "gh",
                 separateDialCode: true,
                 utilsScript: "{{ mix('js/utils.js') }}"
             });
+
+            input.setAttribute("placeholder", "501 234 567");
 
             $('#mobile').on('input', function() {
                 if (!iti.isValidNumber()) {

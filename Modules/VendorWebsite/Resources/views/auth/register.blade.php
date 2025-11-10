@@ -91,7 +91,7 @@
                                                     class="text-danger">*</span></label>
                                             <div class="input-group custom-input-group">
                                                 <input type="text" id="first_name" class="form-control"
-                                                    placeholder="{{ __('vendorwebsite.first_name') }}'" name="first_name" required
+                                                    placeholder="{{ __('vendorwebsite.first_name') }}" name="first_name" required
                                                     data-error="First name is required" />
                                                 <span class="input-group-text"><i class="ph ph-user"></i></span>
                                             </div>
@@ -121,7 +121,7 @@
                                                     class="text-danger">*</span></label>
                                             <div class="input-group custom-input-group">
                                                 <input type="email" id="email" name="email" class="form-control"
-                                                    placeholder="demo@gmail.com" data-error="Email is required" required />
+                                                    placeholder="{{ __('vendorwebsite.email') }}" data-error="Email is required" required />
                                                 <span class="input-group-text"><i class="ph ph-envelope-simple"></i></span>
                                             </div>
                                             <div class="invalid-feedback" id="email_error">
@@ -135,7 +135,7 @@
                                                     class="text-danger">*</span></label>
                                             <div class="input-group custom-input-group">
                                                 <input type="password" id="password" name="password" class="form-control"
-                                                    placeholder="eg '#123@Abc'" data-error="Password is required"
+                                                    placeholder="{{ __('vendorwebsite.password') }}" data-error="Password is required"
                                                     required />
                                                 <span class="input-group-text"><i class="ph ph-eye-slash"
                                                         id="togglePassword"></i></span>
@@ -152,7 +152,7 @@
                                             <div class="input-group custom-input-group">
                                                 <input type="password" id="confirm_password" name="confirm_password"
                                                     class="form-control" data-error="Confirm password is required"
-                                                    placeholder="Confirm your password" required />
+                                                    placeholder="{{ __('vendorwebsite.confirm_password') }}" required />
                                                 <span class="input-group-text"><i class="ph ph-eye-slash"
                                                         id="toggleConfirmPassword"></i></span>
                                             </div>
@@ -212,6 +212,8 @@
                                                             onlyCountries: [], // Allow all countries
                                                             autoPlaceholder: "aggressive"
                                                         });
+
+                                                        mobileInput.setAttribute("placeholder", "501 234 567");
 
                                                         // Store iti instance globally for form submission
                                                         window.iti = iti;
