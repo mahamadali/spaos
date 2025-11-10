@@ -103,12 +103,12 @@
                                                                 {{__('messages.female')}}
                                                             </label>
                                                         </div>
-                                                        <div class="form-check">
+                                                        {{-- <div class="form-check">
                                                             <label class="form-check-label" for="other">
                                                                 <input class="form-check-input"  value="other" type="radio" name="gender" id="other" {{ old('gender', isset($user) ? $user->gender : 'male') == 'other' ? 'checked' : '' }}>
                                                                 {{__('messages.other')}}
                                                             </label>
-                                                        </div>
+                                                        </div> --}}
                                                     </div>
                                                 </div>
                                                 <div class="text-end">
@@ -214,7 +214,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const input = document.querySelector("#mobileInput");
     if (input) {
         const iti = window.intlTelInput(input, {
-            initialCountry: "in",
+            initialCountry: "gh",
             separateDialCode: true,
             utilsScript: "/node_modules/intl-tel-input/build/js/utils.js",
         });

@@ -120,7 +120,7 @@ $(document).ready(function () {
                     // Reset gender to male (default)
                     document.getElementById('gender_male').checked = true;
                     document.getElementById('gender_female').checked = false;
-                    document.getElementById('gender_other').checked = false;
+                    // document.getElementById('gender_other').checked = false;
                     // Reset status to checked (default)
                     document.getElementById('status').checked = true;
                     offcanvasInstance.show(); // Show the offcanvas only if allowed

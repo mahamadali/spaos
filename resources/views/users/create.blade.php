@@ -120,11 +120,11 @@
                                     value="female" {{ isset($user) && $user->gender == 'female' ? 'checked' : '' }}>
                                 <label class="form-check-label" for="gender_female">{{ __('messages.female') }}</label>
                             </div>
-                            <div class="form-check form-check-inline d-flex align-items-center gap-1">
+                            {{-- <div class="form-check form-check-inline d-flex align-items-center gap-1">
                                 <input class="form-check-input" type="radio" name="gender" id="gender_other"
                                     value="other" {{ isset($user) && $user->gender == 'other' ? 'checked' : '' }}>
                                 <label class="form-check-label" for="gender_other">{{ __('messages.intersex') }}</label>
-                            </div>
+                            </div> --}}
                         </div>
                         <p class="mb-0 error text-danger"></p>
                     </div>
@@ -163,7 +163,7 @@
     <script>
         $(document).ready(function() {
             var iti = window.intlTelInput(document.querySelector("#mobile"), {
-                initialCountry: "in",
+                initialCountry: "gh",
                 separateDialCode: true,
                 utilsScript: "{{ mix('js/utils.js') }}"
             });

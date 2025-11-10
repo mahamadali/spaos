@@ -81,10 +81,10 @@
                   <input class="form-check-input" type="radio" name="gender" id="gender_female" value="female">
                   <label class="form-check-label" for="gender_female">{{ __('Female') }}</label>
                 </div>
-                <div class="form-check form-check-inline">
+                {{-- <div class="form-check form-check-inline">
                   <input class="form-check-input" type="radio" name="gender" id="gender_other" value="other">
                   <label class="form-check-label" for="gender_other">{{ __('other') }}</label>
-                </div>
+                </div> --}}
                 <span class="text-danger" id="gender_error"></span>
               </div>
 
@@ -406,7 +406,7 @@ window.loadEditForm = function(customerId) {
                 const gender = customer.gender || 'male';
                 document.getElementById('gender_male').checked = gender === 'male';
                 document.getElementById('gender_female').checked = gender === 'female';
-                document.getElementById('gender_other').checked = gender === 'other';
+                // document.getElementById('gender_other').checked = gender === 'other';
 
                 const statusInput = document.getElementById('customer-status');
                 const statusVal = customer.status;
@@ -509,7 +509,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Reset gender to male (default)
         document.getElementById('gender_male').checked = true;
         document.getElementById('gender_female').checked = false;
-        document.getElementById('gender_other').checked = false;
+        // document.getElementById('gender_other').checked = false;
     });
 
     // Initialize intl-tel-input for mobile field (same as branch form)

@@ -546,7 +546,7 @@ return [
     'open' => 'Open',
     'closed' => 'Closed',
     'create_your_account' => 'Create Your Account',
-    'create_account_for_better_experience' => 'Create account for better experience',
+    'create_account_for_better_experience' => 'Create an account for better experience',
     'first_name_field_is_required' => 'First Name field is required',
     'last_name_field_is_required' => 'Last Name field is required',
     'email_field_is_required' => 'Email field is required',

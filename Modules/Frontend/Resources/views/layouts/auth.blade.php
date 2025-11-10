@@ -189,7 +189,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const input = document.querySelector("#phone");
     if (input) {
         const iti = intlTelInput(input, {
-            initialCountry: "in",
+            initialCountry: "gh",
             separateDialCode: true,
             utilsScript: "/node_modules/intl-tel-input/build/js/utils.js",
         });

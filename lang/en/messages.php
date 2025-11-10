@@ -473,7 +473,7 @@ return [
     'OTP_has_been_resent!' => 'OTP has been resent!',
     'verify' => 'Verify',
     'create_your_account' => 'Create Your Account',
-    'Create_account_for_better_experience' => 'Create account for better experience',
+    'Create_account_for_better_experience' => 'Create an account for better experience',
     'first_name' => 'First Name',
     'first_name_field_is_required' => 'The first name field is required.',
     'last_name' => 'Last Name',

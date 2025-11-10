@@ -28,7 +28,7 @@
                                                     class="text-danger">*</span></label>
                                             <div class="input-group  custom-input-group ">
                                                 <input type="text" class="form-control" id="firstname"
-                                                    placeholder="eg ”Martina”" value="{{ old('first_name') }}"
+                                                    placeholder="{{ __('messages.first_name') }}" value="{{ old('first_name') }}"
                                                     name="first_name" required />
                                                 <span class="input-group-text">
                                                     <i class="ph ph-user"></i>
@@ -48,7 +48,7 @@
                                                     class="text-danger">*</span></label>
                                             <div class="input-group  custom-input-group ">
                                                 <input type="text" name="last_name" class="form-control" id="last_name"
-                                                    placeholder="eg ”Abhrahim”" value="{{ old('last_name') }}" required />
+                                                    placeholder="{{ __('messages.last_name') }}" value="{{ old('last_name') }}" required />
                                                 <span class="input-group-text">
                                                     <i class="ph ph-user"></i>
                                                 </span>
@@ -68,7 +68,7 @@
                                                     class="text-danger">*</span></label>
                                             <div class="input-group  custom-input-group ">
                                                 <input type="text" class="form-control" id="username"
-                                                    placeholder="eg ”Martina_Abhrahim”" value="{{ old('username') }}"
+                                                    placeholder="{{ __('messages.user_name') }}" value="{{ old('username') }}"
                                                     name="username" required />
                                                 <span class="input-group-text">
                                                     <i class="ph ph-user"></i>
@@ -209,13 +209,13 @@
                                                     {{ __('messages.male') }}
                                                 </label>
                                             </div>
-                                            <div class="form-check">
+                                            {{-- <div class="form-check">
                                                 <label class="form-check-label" for="other">
                                                     <input class="form-check-input" value="other" type="radio"
                                                         name="gender" id="other" />
                                                     {{ __('messages.other') }}
                                                 </label>
-                                            </div>
+                                            </div> --}}
                                         </div>
                                     </div>
                                 </div>
@@ -261,7 +261,7 @@
             document.head.appendChild(style);
             var input = document.querySelector("#mobile");
             var iti = window.intlTelInput(input, {
-                initialCountry: "in",
+                initialCountry: "gh",
                 separateDialCode: true,
                 utilsScript: "/node_modules/intl-tel-input/build/js/utils.js",
 
@@ -270,7 +270,7 @@
             // Initialize intl-tel-input AFTER setting styles
             const input = document.querySelector("#mobile");
             window.intlTelInput(input, {
-                initialCountry: "in",
+                initialCountry: "gh",
                 separateDialCode: true,
                 utilsScript: baseUrl + "/node_modules/intl-tel-input/build/js/utils.js"
             });

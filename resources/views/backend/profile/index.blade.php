@@ -336,7 +336,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const input = document.querySelector("#mobileInput");
     if (input) {
         const iti = window.intlTelInput(input, {
-            initialCountry: "in",
+            initialCountry: "gh",
             separateDialCode: true,
             utilsScript: "/node_modules/intl-tel-input/build/js/utils.js",
         });

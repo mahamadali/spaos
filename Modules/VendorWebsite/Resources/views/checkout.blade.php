@@ -732,7 +732,7 @@
 
         var mobileInput = document.querySelector("#mobileInput");
         var iti = window.intlTelInput(mobileInput, {
-            initialCountry: "in",
+            initialCountry: "gh",
             separateDialCode: true,
             utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js"
         });

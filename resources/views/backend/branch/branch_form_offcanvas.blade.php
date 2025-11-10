@@ -392,12 +392,12 @@
                                     <label class="form-check-label"
                                         for="gender_female">{{ __('messages.female') }}</label>
                                 </div>
-                                <div class="form-check">
+                                {{-- <div class="form-check">
                                     <input class="form-check-input" type="radio" name="gender" id="gender_other"
                                         value="other">
                                     <label class="form-check-label"
                                         for="gender_other">{{ __('messages.other') }}</label>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     </div>

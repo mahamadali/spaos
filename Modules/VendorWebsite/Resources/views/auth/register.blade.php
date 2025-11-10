@@ -91,7 +91,7 @@
                                                     class="text-danger">*</span></label>
                                             <div class="input-group custom-input-group">
                                                 <input type="text" id="first_name" class="form-control"
-                                                    placeholder="eg 'Martina'" name="first_name" required
+                                                    placeholder="{{ __('vendorwebsite.first_name') }}'" name="first_name" required
                                                     data-error="First name is required" />
                                                 <span class="input-group-text"><i class="ph ph-user"></i></span>
                                             </div>
@@ -106,7 +106,7 @@
                                                     class="text-danger">*</span></label>
                                             <div class="input-group custom-input-group">
                                                 <input type="text" id="last_name" name="last_name" class="form-control"
-                                                    data-error="Last name is required" placeholder="eg 'Abhrahim'"
+                                                    data-error="Last name is required" placeholder="{{ __('vendorwebsite.last_name') }}"
                                                     required />
                                                 <span class="input-group-text"><i class="ph ph-user"></i></span>
                                             </div>
@@ -178,13 +178,13 @@
                                                     {{ __('vendorwebsite.female') }}
                                                 </label>
                                             </div>
-                                            <div class="form-check">
+                                            {{-- <div class="form-check">
                                                 <label class="form-check-label" for="gender_other">
                                                     <input class="form-check-input" value="other" type="radio"
                                                         name="gender" id="gender_other" />
                                                     {{ __('vendorwebsite.other') }}
                                                 </label>
-                                            </div>
+                                            </div> --}}
                                         </div>
                                         <div class="invalid-feedback" id="gender_error">
                                             {{ __('vendorwebsite.gender_is_required') }}</div>
@@ -196,7 +196,7 @@
                                                     class="text-danger">*</span></label>
                                             <div class="mb-3">
                                                 <input type="tel" id="mobile" name="mobile" class="form-control"
-                                                    placeholder="01234 56789" data-error="Mobile number is required"
+                                                    placeholder="50 113 4311" data-error="Mobile number is required"
                                                     required />
                                             </div>
                                             <script>
@@ -205,7 +205,7 @@
                                                     if (mobileInput && window.intlTelInput) {
                                                         // Initialize intl-tel-input
                                                         const iti = window.intlTelInput(mobileInput, {
-                                                            initialCountry: "in",
+                                                            initialCountry: "gh",
                                                             separateDialCode: true,
                                                             utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js",
                                                             preferredCountries: ['in', 'us', 'gb', 'au', 'ca'],
