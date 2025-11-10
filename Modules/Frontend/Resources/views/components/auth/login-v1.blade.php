@@ -46,7 +46,7 @@
                                                     class="text-danger">*</span></label>
                                             <div class="input-group custom-input-group">
                                                 <input type="password" name="password" class="form-control"
-                                                    id="password" placeholder="eg “#123@Abc”" min="8" required/>
+                                                    id="password" placeholder="{{__('messages.password')}}" min="8" required/>
                                                 <span class="input-group-text" id="toggle-password">
                                                     <i class="ph ph-eye-slash"></i>
                                                 </span>

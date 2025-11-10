@@ -179,7 +179,7 @@
                                             <div class="input-group custom-input-group ">
                                                 <input type="password" class="form-control" id="password_confirmation"
                                                     min="8" name="password_confirmation"
-                                                    placeholder="eg “#123@Abc”" required />
+                                                    placeholder="{{ __('messages.confirm_password') }}" required />
                                                 <span class="input-group-text" id="toggle-confirm-password">
                                                     <i class="ph ph-eye-slash"></i>
                                                 </span>
