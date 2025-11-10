@@ -10,9 +10,9 @@ $notifications_count = optional(auth()->user())->unreadNotifications->count();
                     <img src="{{ asset(Vendorsetting('mini_logo') ?? '/images/logo/mini_logo.png') }}"
                         alt="{{ app_name() }}" height="30">
                 </div>
-                <div>
+                {{-- <div>
                     <img src="{{ asset(Vendorsetting('logo') ?? 'images/logo/frezka.png') }}" alt="{{ app_name() }}">
-                </div>
+                </div> --}}
             </div>
         </a>
         <div class="sidebar-toggle" data-toggle="sidebar" data-active="true">
