@@ -62,7 +62,7 @@
                                                     class="text-danger">*</span></label>
                                             <div class="input-group custom-input-group">
                                                 <input type="email" name="email" id="email" class="form-control"
-                                                    placeholder="demo@gmail.com" value="{{ old('email') }}" required />
+                                                    placeholder="{{ __('vendorwebsite.email') }}" value="{{ old('email') }}" required />
                                                 <span class="input-group-text"><i class="ph ph-envelope-simple"></i></span>
                                             </div>
                                             <div class="invalid-feedback" id="email_error"></div>

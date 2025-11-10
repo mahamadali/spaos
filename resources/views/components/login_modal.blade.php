@@ -30,7 +30,7 @@
                                                 <div class="input-group custom-input-group">
                                                     <input type="email" name="email" value="olivia.davis@gmail.com"
                                                         id="modal_login_email" class="form-control"
-                                                        placeholder="demo@gmail.com" required />
+                                                        placeholder="Email" required />
                                                     <span class="input-group-text"><i
                                                             class="ph ph-envelope-simple"></i></span>
                                                 </div>

@@ -90,7 +90,7 @@
                 <label for="email" class="form-label">{{ __('messages.email') }}</label>
                 <div class="input-group  custom-input-group ">
                                     <input type="email" name="email" class="form-control"
-                                        id="email-id" placeholder="demo@gmail.com" value="{{ old('email') }}" required/>
+                                        id="email-id" placeholder="{{ __('messages.email') }}" value="{{ old('email') }}" required/>
                                     <span class="input-group-text">
                                         <i class="ph ph-envelope-simple"></i>
                                     </span>
