@@ -50,6 +50,10 @@
         color: #a97b50 !important;
     }
 
+    .text-white {
+        color: #FFF !important;
+    }
+
     @media (max-width: 992px) {
         .login-card-box {
             margin: 40px auto;   /* center horizontally + some top space */
@@ -140,7 +144,7 @@
         </div>
         @endif
         <div class="d-flex justify-content-center flex-wrap gap-1 mt-5 pt-3">
-            <span class="font-size-14 text-body">{{__('messages.don’t_have_an_account?')}}</span>
+            <span class="font-size-14 text-body text-white">{{__('messages.don’t_have_an_account?')}}</span>
             <a href="{{ route('user.register') }}"
                 class="text-primary font-size-14 fw-bold">{{__('messages.register_now')}}</a>
         </div>
