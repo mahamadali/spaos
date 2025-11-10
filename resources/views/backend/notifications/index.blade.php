@@ -7,8 +7,8 @@
         <div class="card-body">
 
             <div class="row mt-4">
-                <div class="table-responsive">
-                    <table id="datatable" class="table table-bordered">
+                <div class="table-responsive my-3 mt-3 mb-2 pb-1">
+                    <table id="datatable" class="table border table-responsive rounded">
                         <thead>
                             <tr>
                                <th>
