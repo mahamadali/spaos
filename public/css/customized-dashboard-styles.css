@@ -113,7 +113,6 @@ h1, h2, h3, h4, h5, h6 {
 .table thead th {
     background: var(--bs-secondary-tint-90) !important;
     font-weight: 600 !important;
-    font-size: 15px !important;
     color: #34353b !important;
     border-bottom: none !important;
     padding: 14px 20px;
@@ -128,7 +127,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .table tbody td {
     padding: 14px 20px;
-    font-size: 15px;
     color: #3b3c42;
     vertical-align: middle;
     border-bottom: 1px solid rgba(0,0,0,0.06) !important;
