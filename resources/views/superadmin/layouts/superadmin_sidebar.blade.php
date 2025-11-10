@@ -12,25 +12,11 @@
     </a>
 </li>
 
-
-<li class="nav-item static-item">
-     <a class="nav-link static-item disabled">
-         <span class="default-icon">{{ __('dashboard.users') }}</span>
-     </a>
-</li>
-
-
 <li class="nav-item {{ request()->routeIs('backend.users.index') ? 'active' : '' }}">
     <a target="_self" class="nav-link {{ request()->routeIs('backend.users.index') ? 'active' : '' }}" href="{{ route('backend.users.index') }}">
         <i class="fa-solid fa-users" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Users" data-bs-original-title="Vendors"></i>
         <span class="item-name">{{ __('messages.vendors') }}</span>
     </a>
-</li>
-
-<li class="nav-item static-item">
-     <a class="nav-link static-item disabled">
-         <span class="default-icon">{{ __('dashboard.subscription') }}</span>
-     </a>
 </li>
 
 <li class="nav-item {{ request()->is('app/subscriptions*')  && !request()->routeIs('backend.subscriptions.all_subscription')  ? 'active' : '' }}">
@@ -79,26 +65,11 @@
     </ul>
 </li>
 
-
-
-<li class="nav-item static-item">
-     <a class="nav-link static-item disabled">
-         <span class="default-icon">{{ __('dashboard.plans') }}</span>
-     </a>
-</li>
-
-
 <li class="nav-item {{ request()->routeIs('backend.subscription.plans.index') ? 'active' : '' }}">
     <a target="_self" class="nav-link {{ request()->routeIs('backend.subscription.plans.index') ? 'active' : '' }}" href="{{ route('backend.subscription.plans.index') }}">
         <i class="icon fa-solid fa-layer-group" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Plans" data-bs-original-title="Plans"></i>
         <span class="item-name">{{ __('sidebar.plans') }}</span>
     </a>
-</li>
-
-<li class="nav-item static-item">
-     <a class="nav-link static-item disabled">
-         <span class="default-icon">{{ __('dashboard.payment') }}</span>
-     </a>
 </li>
 
 <li class="nav-item {{ request()->routeIs('backend.payment.index') ? 'active' : '' }}">
@@ -107,13 +78,6 @@
         <span class="item-name">{{ __('sidebar.payments') }}</span>
     </a>
 </li>
-
-<li class="nav-item static-item">
-     <a class="nav-link static-item disabled">
-         <span class="default-icon">{{ __('dashboard.copoun') }}</span>
-     </a>
-</li>
-
 
 <li class="nav-item {{ request()->routeIs('backend.promotions.index') ? 'active' : '' }}">
     <a target="_self" class="nav-link {{ request()->routeIs('backend.promotions.index') ? 'active' : '' }}" href="{{ route('backend.promotions.index') }}">
