@@ -28,7 +28,7 @@
                                                 <label for="modal_login_email" class="form-label fw-medium">Email<span
                                                         class="text-danger">*</span></label>
                                                 <div class="input-group custom-input-group">
-                                                    <input type="email" name="email" value="olivia.davis@gmail.com"
+                                                    <input type="email" name="email" value=""
                                                         id="modal_login_email" class="form-control"
                                                         placeholder="Email" required />
                                                     <span class="input-group-text"><i
@@ -43,9 +43,9 @@
                                                     class="form-label fw-medium">Password<span
                                                         class="text-danger">*</span></label>
                                                 <div class="input-group custom-input-group">
-                                                    <input type="password" name="password" value="12345678"
+                                                    <input type="password" name="password" value=""
                                                         id="modal_login_password" class="form-control"
-                                                        placeholder="eg-#123@Abc\" required />
+                                                        placeholder="Password" required />
                           <span class="input-group-text"
                                                         id="modal_togglePassword"><i class="ph ph-eye-slash"></i></span>
                                                 </div>

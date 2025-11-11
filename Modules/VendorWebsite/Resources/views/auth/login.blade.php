@@ -53,7 +53,7 @@
                                                 class="form-label fw-medium">{{ __('vendorwebsite.email') }}<span
                                                     class="text-danger">*</span></label>
                                             <div class="input-group custom-input-group">
-                                                <input type="email" name="email" value="olivia.davis@gmail.com"
+                                                <input type="email" name="email" value=""
                                                     id="email" class="form-control" placeholder="{{ __('vendorwebsite.email') }}"
                                                     required />
                                                 <span class="input-group-text"><i class="ph ph-envelope-simple"></i></span>
@@ -68,7 +68,7 @@
                                                 class="form-label fw-medium">{{ __('vendorwebsite.password') }}<span
                                                     class="text-danger">*</span></label>
                                             <div class="input-group custom-input-group">
-                                                <input type="password" value="12345678" name="password" id="password"
+                                                <input type="password" value="" name="password" id="password"
                                                     class="form-control" placeholder="{{ __('vendorwebsite.password') }}" required />
                                                 <span class="input-group-text" id="togglePassword">
                                                     <i class="ph ph-eye-slash" id="toggleIcon"></i>
