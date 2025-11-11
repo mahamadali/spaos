@@ -3,7 +3,7 @@
         <div class="section-title text-center">
             <span class="decorator-title decorator-font text-primary text-uppercase text-decoration-underline">{{__('vendorwebsite.faq')}}</span>
             <h4 class="title">{{__('vendorwebsite.frequently_asked_questions')}}</h4>
-            <p class="mb-0 mt-2">{{__('vendorwebsite.ask_anythings_related_to_frezka_and_we_will_provide_you_your_query_with_a_solution')}}</p>
+            <p class="mb-0 mt-2">{{__('vendorwebsite.ask_anythings_related_to_frezka_and_we_will_provide_you_your_query_with_a_solution', ['app' => setting('app_name')])}}</p>
         </div>
         <div class="row">
             <div class="col-xl-1 d-xl-block d-none"></div>

@@ -9,10 +9,10 @@
                     <div class="branch-info-box">
                         <h6 class="font-size-18 mb-2 fw-medium">{{__('vendorwebsite.download_the_app_from_the_option_below')}}</h6>
                         <div class="d-flex flex-wrap align-items-center gap-3 justify-content-center">
-                            <a href="https://play.google.com/store/search?q=frezka&c=apps&hl=en_IN" target="_blank" rel="noopener">
+                            <a href="https://play.google.com/store/search?q=spaos&c=apps&hl=en_IN" target="_blank" rel="noopener">
                                 <img src="{{ asset('img/vendorwebsite/googleplay.png') }}" class="img-fluid position-relative z-9" alt="Google Play">
                             </a>
-                            <a href="https://apps.apple.com/us/app/frezka-beauty-salons/id6450424262" target="_blank" rel="noopener">
+                            <a href="https://apps.apple.com/us/app/spaos-beauty-salons/id6450424262" target="_blank" rel="noopener">
                                 <img src="{{ asset('img/vendorwebsite/appstore.png') }}" class="img-fluid position-relative z-9" alt="App Store">
                             </a>
                         </div>

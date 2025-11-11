@@ -2,7 +2,7 @@
     <section class="section-spacing-top overflow-hidden">
       <div class="section-title-wrap center">
         <span class="subtitle">{{__('messages.happy_customer')}}</span>
-        <h3 class="section-title">{{__('messages.happy_customer_from_frezka')}}</h3>
+        <h3 class="section-title">{{__('messages.happy_customer_from_frezka', ['app' => setting('app_name')])}}</h3>
       </div>
         <div class="container-fluid px-0 ">
           <div class="row">

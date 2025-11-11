@@ -62,7 +62,7 @@
                     <p class="font-size-14 text-white mt-4 mb-0">{{ $siteDescription }}</p>
                     @if (getVendorSetting('inquriy_email') != '')
                         <p class="font-size-14 text-white mt-4 mb-0"> {{ __('vendorwebsite.email') }} :
-                            {{ getVendorSetting('inquriy_email') ?? 'frezka-saas@admin.com' }} </p>
+                            {{ getVendorSetting('inquriy_email') ?? 'spaos-saas@admin.com' }} </p>
                     @endif
                     @if (getVendorSetting('helpline_number') != '')
                         <p class="font-size-14 text-white mt-1 mb-0"> {{ __('vendorwebsite.contact_number') }} :
@@ -74,7 +74,7 @@
 
                 <div class="col-xl-1 col-lg-2 d-lg-block d-none"></div>
 
-                <!-- About Frezka -->
+                <!-- About SpaOS -->
                 @if (!empty($sectionValues['about']))
                     <div class="col-xl-2 col-md-4">
                         <h5 class="mb-4 text-white">

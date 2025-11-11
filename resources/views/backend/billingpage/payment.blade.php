@@ -340,7 +340,7 @@
                         <img src="{{ asset('/img/frontend/modal-success.png') }}" alt="modal-success">
                     </div>
                     <div class="text-center">
-                        <h5>{{ __('frontend.thank_you') }}</h5>
+                        <h5>{{ __('frontend.thank_you', ['app' => setting('app_name')]) }}</h5>
                         <p class="mb-0">{{ __('frontend.successfully_purchased_plan') }}</p>
                     </div>
                     <div class="mt-5 pt-2 d-flex justify-content-center">

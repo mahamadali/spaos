@@ -387,7 +387,7 @@
             <div class="" style="display: flex; align-items: center; gap: 10px;">
                 <h6 style="font-size: 8px;">For more information, visit our website:
                     <a href="{{ route('vendor.index') }}"
-                        style="color: #A82D86; font-size: 8px;">{{ route('vendor.index') ?? 'www.frezka.com' }}</a>
+                        style="color: #A82D86; font-size: 8px;">{{ route('vendor.index') ?? 'www.spaos.com' }}</a>
                 </h6>
             </div>
             <h5 style="font-weight: 500; font-size: 8px; margin-top: 16px;">© {{ date('Y') }}

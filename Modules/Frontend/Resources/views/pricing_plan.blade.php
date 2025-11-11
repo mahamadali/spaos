@@ -344,7 +344,7 @@
                         <img src="{{ asset('/img/frontend/modal-success.png') }}" alt="modal-success">
                     </div>
                     <div class="text-center">
-                        <h5>{{ __('frontend.thank_you_for_choosing') }}</h5>
+                        <h5>{{ __('frontend.thank_you_for_choosing', ['app' => setting('app_name')]) }}</h5>
                         <p class="mb-0">
                             {{ __('frontend.successfully_purchased') }}
                             <span class="text-primary">{{ __('frontend.essential') }}</span> {{ __('messages.plan') }}

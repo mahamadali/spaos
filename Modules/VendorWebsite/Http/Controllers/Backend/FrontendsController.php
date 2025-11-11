@@ -1338,7 +1338,7 @@ class FrontendsController extends Controller
                     $logoPath = parse_url($logoSetting, PHP_URL_PATH) ?? $logoSetting;
                     // ...existing code...
                     $logoPath = ltrim($logoPath, '/');
-                    // Remove the first subfolder dynamically (not static like 'frezka')
+                    // Remove the first subfolder dynamically (not static like 'spaos')
                     $logoPath = preg_replace('/^[^\/]+\//', '', $logoPath);
                     // Build absolute public path
                     $logoPath = public_path($logoPath);

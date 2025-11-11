@@ -1844,7 +1844,7 @@ if (request()->get('stripe_back') === 'true') {
                                 icon: 'success',
                                 title: '{{ __('vendorwebsite.booking_successful') }}',
                                 html: `
-                            <div>{{ __('vendorwebsite.thank_you_for_your_booking') }}</div>
+                            <div>{{ __('vendorwebsite.thank_you_for_your_booking', ['app' => setting('app_name')]) }}</div>
                             {{ __('vendorwebsite.your_appointment_has_been_successfully_booked') }}<br><br>
                             <div>
                                 ${response.booking_id ? `<span class="d-flex align-items-center justify-content-center gap-1 mb-2"><span class="heading-color fw-medium">{{ __('vendorwebsite.booking_id') }}</span> : <h6 class="mb-0 fw-bold text-primary">#${response.booking_id}</h6></span>` : ''}
